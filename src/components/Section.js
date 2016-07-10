@@ -6,7 +6,7 @@ export default class Section extends Component {
 	componentWillUpdate(props) {
 		const position = props.positions[props.index]
 		const element = ReactDOM.findDOMNode(this)
-    const height = element.getElementsByClassName('section-heading')[0].offsetHeight
+    const height = props.rowHeight
     const offsetTop = element.offsetTop
     if ((position != 'above') && (props.scroll.top + props.margins.top > offsetTop)) { 
     	props.onEnterExit(props.index,'above') 
@@ -24,19 +24,15 @@ export default class Section extends Component {
 
   render() {
   	const section = this.props.sections[this.props.index]
-  	const offset = -this.props.index*this.props.rowHeight - 16
-  	const headingStyle = {
-  		backgroundColor: section.headingBgColor || section.bgColor,
-  		color: section.headingBgColor || section.bgColor
-  	};
-    return <div className="section">
-  		<div className="section-heading-bg" style={headingStyle}>
+  	const offset = -this.props.index*this.props.rowHeight - this.props.rowHeight*0.2
+  	return <div className="section">
+  		<div className="section-heading-bg">
 	    	<div className="section-heading">
-	    		<div id={"section-" + section.id} style={{position: 'relative', top: offset}}></div>
-	    		<a href={"#section-" + section.id}>{section.heading}</a>
+	    		<div id={"_" + section.id} style={{position: 'relative', top: offset}}></div>
+	    		<a href={"#" + section.id}>{section.heading}</a>
 	    	</div>
 	    </div>
-	    <div className="section-main-bg" style={{backgroundColor: section.bgColor}}>
+	    <div className="section-main-bg">
     		<div className="section-main">{this.props.children}</div>
 	    </div>
    	</div>
