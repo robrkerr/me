@@ -40,12 +40,19 @@ body {
   height: 100%;
 }
 .section-heading {
+  position: relative;
   padding: 1rem;
   width: 100%;
   font-size: 1.4rem;
   font-weight: 600;
   height: 60px;
-  background-color: hsl(150,60%,90%);
+  /*background-color: hsl(150,60%,90%);*/
+  background-color: white;
+}
+.section-heading > a {
+  pointer-events: auto;
+  /*text-decoration: none;*/
+  /*color: black;*/
 }
 .section-main {
   padding: 1rem;
@@ -59,12 +66,4 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-.headings-row {
-  padding: 1rem;
-  width: 100%;
-  font-size: 1.4rem;
-  font-weight: 600;
-  height: 60px;
-  background-color: hsl(150,60%,90%);
 }
