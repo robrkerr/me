@@ -5,8 +5,10 @@ import Headings from './Headings'
 
 const sections = [
   {id: 1, heading: 'Hispter 1'},
-  {id: 2, heading: 'Hispter 2'},
-  {id: 3, heading: 'Hispter 3'}
+  {id: 2, heading: 'Hispter 2' },
+  // {id: 3, heading: 'Hispter 3', bgColor: '#dedeff', headingBgColor: '#d2d2ff' },
+  {id: 3, heading: 'Hispter 3', bgColor: '#fbe7f6' },
+  {id: 4, heading: 'Hispter 4', bgColor: '#dedeff' }
 ]
 
 const rowHeight = 60
@@ -86,6 +88,15 @@ export default class App extends Component {
               Heirloom intelligentsia readymade XOXO VHS. Bicycle rights drinking vinegar street art scenester. Wolf man bun salvia kogi. Mixtape crucifix keytar, williamsburg helvetica twee 3 wolf moon cray mlkshk deep v. Hoodie pop-up pickled biodiesel. Pinterest crucifix skateboard, scenester sartorial blog listicle before they sold out 8-bit lo-fi health goth typewriter cornhole franzen. Heirloom typewriter blue bottle chartreuse fingerstache cronut.
             </Section>
             <Section index={2} sections={sections} scroll={this.state.scroll} margins={this.state.margins} positions={this.state.positions} rowHeight={rowHeight} onEnterExit={onEnterExit}>
+              Pop-up cardigan craft beer skateboard. Austin helvetica neutra trust fund post-ironic, synth authentic ethical. Seitan neutra jean shorts keffiyeh, DIY cornhole 8-bit artisan swag master cleanse meditation green juice godard occupy cred. Marfa wayfarers fixie cardigan shabby chic lomo. Literally tumblr bespoke pug XOXO, shoreditch 3 wolf moon echo park. Tacos humblebrag fingerstache chambray crucifix lumbersexual. Mumblecore keytar tumblr, slow-carb bespoke four loko four dollar toast.
+
+              Photo booth migas banjo, trust fund retro kombucha deep v lo-fi tacos food truck godard humblebrag umami. Skateboard health goth try-hard, etsy schlitz mixtape pour-over messenger bag. Portland tofu flexitarian ennui, occupy beard squid locavore trust fund taxidermy. Asymmetrical gentrify neutra, cold-pressed drinking vinegar heirloom banh mi. Plaid man braid fashion axe, farm-to-table mixtape distillery ethical leggings banh mi food truck venmo gentrify narwhal taxidermy keytar. Occupy neutra banjo, pabst raw denim single-origin coffee venmo everyday carry aesthetic. Aesthetic bespoke hammock PBR&B lomo.
+
+              Hella tacos direct trade XOXO butcher, 3 wolf moon offal truffaut helvetica four dollar toast selfies fixie cardigan tattooed keytar. Pour-over stumptown pop-up, hammock slow-carb plaid church-key street art. Beard pug whatever tattooed, authentic schlitz meggings food truck cardigan ennui normcore put a bird on it polaroid lo-fi kickstarter. Bushwick street art synth readymade cronut, banh mi neutra crucifix plaid sustainable. Blue bottle disrupt tilde, selvage 8-bit thundercats mlkshk polaroid food truck pop-up sartorial normcore aesthetic small batch photo booth. Fashion axe flannel kinfolk, wolf sriracha retro health goth distillery master cleanse poutine direct trade aesthetic. Humblebrag meggings truffaut listicle scenester celiac, iPhone small batch offal microdosing single-origin coffee dreamcatcher swag art party literally.
+
+              Heirloom intelligentsia readymade XOXO VHS. Bicycle rights drinking vinegar street art scenester. Wolf man bun salvia kogi. Mixtape crucifix keytar, williamsburg helvetica twee 3 wolf moon cray mlkshk deep v. Hoodie pop-up pickled biodiesel. Pinterest crucifix skateboard, scenester sartorial blog listicle before they sold out 8-bit lo-fi health goth typewriter cornhole franzen. Heirloom typewriter blue bottle chartreuse fingerstache cronut.
+            </Section>
+            <Section index={3} sections={sections} scroll={this.state.scroll} margins={this.state.margins} positions={this.state.positions} rowHeight={rowHeight} onEnterExit={onEnterExit}>
               Pop-up cardigan craft beer skateboard. Austin helvetica neutra trust fund post-ironic, synth authentic ethical. Seitan neutra jean shorts keffiyeh, DIY cornhole 8-bit artisan swag master cleanse meditation green juice godard occupy cred. Marfa wayfarers fixie cardigan shabby chic lomo. Literally tumblr bespoke pug XOXO, shoreditch 3 wolf moon echo park. Tacos humblebrag fingerstache chambray crucifix lumbersexual. Mumblecore keytar tumblr, slow-carb bespoke four loko four dollar toast.
 
               Photo booth migas banjo, trust fund retro kombucha deep v lo-fi tacos food truck godard humblebrag umami. Skateboard health goth try-hard, etsy schlitz mixtape pour-over messenger bag. Portland tofu flexitarian ennui, occupy beard squid locavore trust fund taxidermy. Asymmetrical gentrify neutra, cold-pressed drinking vinegar heirloom banh mi. Plaid man braid fashion axe, farm-to-table mixtape distillery ethical leggings banh mi food truck venmo gentrify narwhal taxidermy keytar. Occupy neutra banjo, pabst raw denim single-origin coffee venmo everyday carry aesthetic. Aesthetic bespoke hammock PBR&B lomo.
