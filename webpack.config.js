@@ -36,7 +36,6 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.css$/, loaders: ['style?sourceMap', 'css?sourceMap'] },
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.svg$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
     ]
