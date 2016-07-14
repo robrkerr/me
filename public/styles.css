@@ -84,7 +84,7 @@ html { font: 16pt Avenir Next Condensed, serif; }
   max-width: 600px; 
   margin: 0 auto; 
   line-height: 1.8rem;
-  font: 12pt Avenir Next Light, serif;
+  font-weight: 300;
 }
 .section-main > *+* {
   margin-top: 0.8rem;
