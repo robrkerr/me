@@ -6,12 +6,12 @@ html, body {
   height: 100%;
   overflow-x: hidden;
 }
-html { font: 16pt Avenir Next Condensed, serif; }
-@media (max-width: 600px) {
-  html { font: 14pt Avenir Next Condensed, serif; }
+html { font: 12pt Avenir Next Condensed, serif; }
+@media (min-height: 550px) and (min-width: 400px) {
+    html { font: 14pt Avenir Next Condensed, serif; }
 }
-@media (max-width: 400px) {
-  html { font: 12pt Avenir Next Condensed, serif; }
+@media (min-height: 650px) and (min-width: 600px) {
+  html { font: 16pt Avenir Next Condensed, serif; }
 }
 #app { 
   width: 100%;
