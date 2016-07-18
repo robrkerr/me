@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom'
 import Section from './Section'
 import Headings from './Headings'
 
+// const sections = [
+//   {id: 'contact', heading: 'My name is Robert Kerr'},
+//   {id: 'neuroscience', heading: 'I am a computational neuroscientist', bgColor: 'hsl(36,100%,98%)'},//, bgColor: '#2e2633', color: '#dfdfdf' },
+//   {id: 'web', heading: 'And more recently a web developer', bgColor: 'hsl(36,100%,96%)' },
+//   {id: 'viz', heading: 'I enjoy finding new ways to convey ideas', bgColor: 'hsl(36,100%,94%)' },
+//   {id: 'references', heading: 'I have people who can vouch for me', bgColor: 'hsl(36,100%,92%)' }
+// ]
+
 const sections = [
-  {id: 'contact', heading: 'My name is Robert Kerr'},
-  {id: 'neuroscience', heading: 'I am a computational neuroscientist', bgColor: '#2e2633', color: '#dfdfdf' },
-  {id: 'web', heading: 'And more recently a web developer', bgColor: '#fdf2fb' },
-  {id: 'viz', heading: 'I enjoy finding new ways to convey ideas' },
-  {id: 'references', heading: 'I have people who can vouch for me' }
+  {id: 'contact', heading: 'My name is Robert Kerr', bgColor: 'hsl(236,10%,15%)', color: '#dfdfdf'},
+  {id: 'neuroscience', heading: 'I am a computational neuroscientist', bgColor: 'hsl(36,10%,5%)', color: '#dfdfdf' },
+  {id: 'web', heading: 'And more recently a web developer', bgColor: 'hsl(136,10%,10%)', color: '#dfdfdf' },
+  {id: 'viz', heading: 'I enjoy finding new ways to convey ideas', bgColor: 'hsl(136,10%,10%)', color: '#dfdfdf' },
+  {id: 'references', heading: 'I have people who can vouch for me', bgColor: 'hsl(136,10%,10%)', color: '#dfdfdf' }
 ]
 
 export default class App extends Component {
@@ -40,7 +48,7 @@ export default class App extends Component {
   updateScroll(event,newPositions) {
     const positions = newPositions || this.state.positions
     const topHeadingHeight = positions.filter(p => p == 'above').length * this.state.rowHeight
-    const bottomHeadingHeight = positions.filter(p => p == 'below').length * this.state.rowHeight
+    const bottomHeadingHeight = (positions.filter(p => p == 'below').length + 0.34) * this.state.rowHeight
     const margins = {
       top: topHeadingHeight,
       bottom: bottomHeadingHeight
@@ -71,32 +79,86 @@ export default class App extends Component {
       below: this.state.positions[i] == 'below'
     }))
     const aboveSections = sectionList.filter(s => s.above)
-    // const belowSections = sections.filter((s,i) => (this.state.positions[i] == 'below'))
-    // const currentSection = sections.filter((s,i) => (this.state.positions[i] == 'within'))[0]
-    const currentSection = aboveSections[aboveSections.length-1]
-    const currentBgColor = currentSection ? currentSection.bgColor : undefined
-    const currentColor = currentSection ? currentSection.color : undefined
+    const withinSections = sectionList.filter(s => !s.above && !s.below)
+    const belowSections = sectionList.filter(s => s.below)
+    const currentSection = aboveSections[aboveSections.length-1] || withinSections[0] || belowSections[0]
+    const currentBgColor = currentSection.bgColor
+    const currentColor = currentSection.color
+    const mainStyle = {backgroundColor: currentBgColor, color: currentColor};
+    const imageStyle = {backgroundColor: currentBgColor, color: currentBgColor};
     return (
       <div className="main">
-        <div id="scrolling" className="scrolling-container" style={{backgroundColor: currentBgColor || 'white', color: currentColor}}>
-          <div className="scrolling-container-inner">
-            <div className="face-box">
-              <div className="face"></div>
+        <div id="scrolling" className="scrolling-container">
+          <div className="scrolling-container-inner" style={mainStyle}>
+            <div className="top-panel">
+              <div className="face-box"><div className="face"></div></div>
             </div>
             <Section index={0} sections={sectionList} scroll={this.state.scroll} margins={this.state.margins} positions={this.state.positions} rowHeight={this.state.rowHeight} onEnterExit={onEnterExit}>
-              <p>I live in Melbourne (Australia) but I am originally from Brisbane.</p>
-              <p>My current address is 5/214 Argyle Street, Fitzroy 3065</p>
-              <p>You can contact me by email at robrkerr@gmail.com</p>
-              <p>Or by phone on (+61) 431 587 997</p>
-              <p>You can also find me on twitter (@robrkerr) and GitHub (<a target="_blank" href="https://github.com/robrkerr">robrkerr</a>)</p>
-              <p>I have an undergraduate dual-degree in Mechanical Engineering and Mathematics from the University of Queensland (2005-2009). </p>
-              <p>During this time I also completed a number of work experience postings, including: </p>
+              <div>
+                And this is my story.
+              </div>
+              <div>
+                Just want a regular, printable cv? <a target="_blank" href="/cv.pdf">Here you go.</a>
+              </div>
+              <div>
+                I am a scientific researcher who lives in Melbourne (Australia) 
+                and has recently transitioned into web development. I'm particularly 
+                interested in how data and ideas are visualised and presented. This 
+                website is a reflection of that and was an opportunity to me to improve 
+                and demonstrate my skills in building things for the web. 
+              </div>
+              <div>
+                You can contact me by email, phone or find me on Twitter and GitHub:
+              </div>
+              <div>
+                <span className="section-highlight">
+                  <span className="section-field-label">Address: </span>
+                  <span className="section-field-value">5/214 Argyle Street, Fitzroy 3065</span>
+                </span>
+                <span className="section-highlight">
+                  <span className="section-field-label">Email: </span>
+                  <span className="section-field-value">robrkerr@gmail.com</span>
+                </span>
+                <span className="section-highlight">
+                  <span className="section-field-label">Phone: </span>
+                  <span className="section-field-value">(+61) 431 587 997</span>
+                </span>
+                <span className="section-highlight">
+                  <span className="section-field-label">Twitter: </span>
+                  <span className="section-field-value">@robrkerr</span>
+                </span>
+                <span className="section-highlight">
+                  <span className="section-field-label">GitHub: </span>
+                  <span className="section-field-value">@robrkerr</span>
+                </span>
+              </div>
             </Section>
             <Section index={1} sections={sectionList} scroll={this.state.scroll} margins={this.state.margins} positions={this.state.positions} rowHeight={this.state.rowHeight} onEnterExit={onEnterExit}>
-              <p>I am currently a Research Staff Member at IBM Research Australia.</p>
-              <p>Undergraduate degree in Mechanical Engineering and Mathematics at the University of Queensland. </p>
-              <p>I moved to Melbourne to do a PhD in computational neuroscience... published papers... </p>
-              <p>A list of my published papers can be found <a target="_blank" href="https://scholar.google.com.au/citations?user=ptV_Nz0AAAAJ&hl=en&oi=sra">here</a></p>
+              <div>
+                But before that, I completed a dual-degree in Mechanical Engineering 
+                and Mathematics from the University of Queensland (2005-2009). During 
+                this degree, I gained experience at a number of vacaction and part-time 
+                jobs, including: 
+              </div>
+              <div>
+                <span className="section-highlight">
+                  <div>
+                    <div>Veitch Lister Consulting - Transport Modelling Company</div>
+                    <div>Leslie Consulting - Mining Company</div>
+                  </div>
+                </span>
+              </div>
+              <div>
+                At this point I became interested in neuroscience, moved to 
+                Melbourne and completed a PhD at the University of Melbourne 
+                (2010-2014). My PhD...
+              </div>
+
+              <div className="image neuron-box" style={imageStyle}><div className="neuron"></div></div>
+
+              <div>I am currently a Research Staff Member at IBM Research Australia.</div>
+              <div>A list of my published papers can be found <a target="_blank" href="https://scholar.google.com.au/citations?user=ptV_Nz0AAAAJ&hl=en&oi=sra">here</a></div>
+              
             </Section>
             <Section index={2} sections={sectionList} scroll={this.state.scroll} margins={this.state.margins} positions={this.state.positions} rowHeight={this.state.rowHeight} onEnterExit={onEnterExit}>
               Pop-up cardigan craft beer skateboard. Austin helvetica neutra trust fund post-ironic, synth authentic ethical. Seitan neutra jean shorts keffiyeh, DIY cornhole 8-bit artisan swag master cleanse meditation green juice godard occupy cred. Marfa wayfarers fixie cardigan shabby chic lomo. Literally tumblr bespoke pug XOXO, shoreditch 3 wolf moon echo park. Tacos humblebrag fingerstache chambray crucifix lumbersexual. Mumblecore keytar tumblr, slow-carb bespoke four loko four dollar toast.
