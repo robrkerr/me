@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import styles from './styles.css'
 
 export default class Section extends Component {
 
@@ -24,16 +25,16 @@ export default class Section extends Component {
 
   render() {
   	const section = this.props.sections[this.props.index]
-  	const offset = -this.props.index*this.props.rowHeight - this.props.rowHeight*0.2
-  	return <div className="section">
-  		<div className="section-heading-bg">
-	    	<div className="section-heading">
+  	const offset = -this.props.index*this.props.rowHeight - this.props.rowHeight*0.5
+  	return <div className={styles.section}>
+  		<div className={styles.sectionHeadingBg}>
+	    	<div className={styles.sectionHeading}>
 	    		<div id={"_" + section.id} style={{position: 'relative', top: offset}}></div>
 	    		<a href={"#" + section.id}>{section.heading}</a>
 	    	</div>
 	    </div>
-	    <div className="section-main-bg">
-    		<div className="section-main">{this.props.children}</div>
+	    <div className={styles.sectionMainBg}>
+    		<div className={styles.sectionMain}>{this.props.children}</div>
 	    </div>
    	</div>
   }

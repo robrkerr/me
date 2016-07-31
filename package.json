@@ -3,8 +3,9 @@
   "scripts": {
     "test": "webpack",
     "start": "NODE_ENV=development webpack-dev-server --port=7777 --content-base public/ --hot --inline",
-    "clean": "rm -f public/bundle.js",
-    "build": "npm run clean && NODE_ENV=production webpack -p --progress"
+    "clean": "rm -f public/bundle.js && rm -f public/styles.css",
+    "build": "npm run clean && NODE_ENV=production webpack -p --progress",
+    "deploy": "npm run build && surge -p public/ -d robkerr.surge.sh"
   },
   "author": "Robert Kerr",
   "devDependencies": {
@@ -12,12 +13,14 @@
     "babel-core": "^5.2.17",
     "babel-loader": "^5.0.0",
     "css-loader": "^0.23.1",
-    "css-wipe": "^4.2.2",
     "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^0.8.1",
     "file-loader": "^0.9.0",
     "image-webpack-loader": "^2.0.0",
     "imports-loader": "^0.6.5",
     "node-libs-browser": "^0.5.0",
+    "postcss-color-rebeccapurple": "^1.1.0",
+    "postcss-loader": "^0.4.3",
     "raw-loader": "^0.5.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
@@ -26,6 +29,7 @@
     "webpack": "^1.9.10",
     "webpack-dev-server": "^1.9.0",
     "webpack-hot-middleware": "^2.12.0",
-    "whatwg-fetch": "^1.0.0"
+    "whatwg-fetch": "^1.0.0",
+    "viewport-units-buggyfill": "^0.6.0"
   }
 }

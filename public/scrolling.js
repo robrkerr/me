@@ -16,11 +16,11 @@ function animateScrollToTarget(element,target,duration) {
 }
 
 $('document').ready(function(){
-  var page = document.getElementById('scrolling');
+  var element = document.body
   var target = document.getElementById("_" + window.location.hash.slice(1));
-  if (target) { setTimeout(function() { animateScrollToTarget(page,target,100); }, 500); }
+  if (target) { setTimeout(function() { animateScrollToTarget(element,target,100); }, 500); }
   $('a[href*="#"]:not([href="#"])').click(function() {
     var target = document.getElementById("_" + this.hash.slice(1));
-    animateScrollToTarget(page,target,500);
+    animateScrollToTarget(element,target,500);
   });
 });

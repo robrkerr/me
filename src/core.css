@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body { 
+  overflow-x: hidden;
+}
+html { 
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  /*color: hsl(0, 0%, 15%);*/
+  color: hsl(40,0%,80%);
+  background-color: hsl(40,100%,98%);
+}
+b, a {
+  font-weight: 400;
+  /*color: hsl(0, 0%, 30%);*/
+  color: hsl(40,0%,90%);
+}
+@media (min-height: 550px) and (min-width: 400px) {
+  html { font-size: 16px; }
+}
+@media (min-height: 650px) and (min-width: 600px) {
+  html { font: 18px; }
+}
+/*body > div { 
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}*/
+html {
+  width: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
