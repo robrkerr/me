@@ -97,7 +97,7 @@ export default class App extends Component {
     const currentColor = currentSection.color
     const mainStyle = {backgroundColor: currentBgColor, color: currentColor};
     const imageStyle = {backgroundColor: currentBgColor, color: currentBgColor};
-    document.documentElement.style['background-color'] = (aboveSections.length > 0) ? currentBgColor : undefined;
+    document.documentElement.style['background-color'] = (aboveSections.length > 0) ? currentBgColor : "hsl(40,100%,98%)";
     return (
       <div>
         <div className={styles.scrollingContainerInner} style={mainStyle}>
