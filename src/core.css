@@ -17,10 +17,10 @@ b, a {
   color: hsl(40,0%,90%);
 }
 @media (min-height: 550px) and (min-width: 400px) {
-  html { font-size: 16px; }
+  html { font-size: 17px; }
 }
 @media (min-height: 650px) and (min-width: 600px) {
-  html { font: 18px; }
+  html { font: 20px; }
 }
 html {
   width: 100%;

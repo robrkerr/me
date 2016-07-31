@@ -43,17 +43,17 @@ export default class App extends Component {
       component.setState({rowHeight: headingRowHeight, scrollPad: scrollPad})
     }, 500)
     window.addEventListener('scroll', this.updateScroll)
-    window.addEventListener('resize', this.resize)
+    // window.addEventListener('resize', this.resize)
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll')
-    window.removeEventListener('resize')
+    // window.removeEventListener('resize')
   }
 
-  resize() {
-    // alert('hi' + window.innerHeight)
-  }
+  // resize() {
+  //   // alert('hi' + window.innerHeight)
+  // }
 
   updateScroll(event,newPositions) {
     const positions = newPositions || this.state.positions
@@ -63,8 +63,13 @@ export default class App extends Component {
       top: topHeadingHeight,
       bottom: bottomHeadingHeight
     }
-    if (event) {
-      const scrollingElement = event.target.scrollingElement
+    // alert('hello ' + JSON.stringify(event))
+    if (newPositions == undefined) {
+      const scrollingElement = document.body
+      // alert(JSON.stringify({
+      //   top: scrollingElement.scrollTop,
+      //   bottom: scrollingElement.scrollTop + window.innerHeight
+      // }))
       this.setState({
         scroll: {
           top: scrollingElement.scrollTop,
