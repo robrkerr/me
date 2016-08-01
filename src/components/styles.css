@@ -98,15 +98,21 @@
 .sectionFieldValue {
   display: flex;
 }
-.headingsTop {
+.newSubSection {
+  margin-top: 1.6rem;
+}
+.headingsPanel {
+  pointer-events: none;
   position: fixed;
-  top: 0;
   width: 100%;
 }
+.headingsTop {
+  composes: headingsPanel;
+  top: 0;
+}
 .headingsBottom {
-  position: fixed;
+  composes: headingsPanel;
   bottom: 0;
-  width: 100%;
 }
 .headingBg {
   width: 100%;
@@ -130,12 +136,13 @@
   width: 90%;
   margin: 0 auto;
   padding: 1rem 0;
-  font-size: 14px;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 .timelineColumn {
   flex-grow: 1;
   position: relative;
-  margin: 0 0.5rem;
+  margin: 0 0.2rem;
 }
 .studyTimeline {
   composes: timelineColumn;
@@ -155,6 +162,7 @@
   width: 100%;
   text-align: center;
   height: 20px;
+  line-height: 1.5;
 }
 .timelineItem {
   position: absolute;
@@ -162,7 +170,7 @@
 }
 .timelineItemInner {
   text-align: center;
-  padding: 0.1rem 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 .timelineItemBg {
   background-color: currentColor;

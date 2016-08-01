@@ -31,15 +31,15 @@ const sections = [
     content: Section3
   },
   {
-    id: 'people', 
-    heading: 'I enjoy working with good people', 
+    id: 'learning', 
+    heading: 'I enjoy learning new things', 
     bgColor: '#151019', 
     color: '#dfdfdf',
     content: Section4
   },
   {
-    id: 'references', 
-    heading: 'I have people who can vouch for me', 
+    id: 'people', 
+    heading: 'And working with good people', 
     bgColor: 'hsl(236,10%,15%)', 
     color: '#dfdfdf',
     content: Section5

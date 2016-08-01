@@ -25,7 +25,7 @@ export default class Section1 extends Component {
         website is a reflection of that and was an opportunity for me to improve 
         and demonstrate my skills in building things for the web. 
       </div>
-      <div>
+      <div className={styles.newSubSection}>
         You can contact me by email or phone, and find me on Twitter and GitHub:
       </div>
       <div>
@@ -50,7 +50,7 @@ export default class Section1 extends Component {
           <span className={styles.sectionFieldValue}>@robrkerr</span>
         </span>
       </div>
-      <div>
+      <div className={styles.newSubSection}>
         Here's a timeline of my study and employment history:
       </div>
       <div className={styles.timeline}>
