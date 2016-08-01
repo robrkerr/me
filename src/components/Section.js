@@ -24,17 +24,17 @@ export default class Section extends Component {
 	}
 
   render() {
-  	const section = this.props.sections[this.props.index]
-  	const offset = -this.props.index*this.props.rowHeight - this.props.rowHeight*0.5
+  	const { id, heading, index, rowHeight, children } = this.props
+  	const offset = -index*rowHeight - rowHeight*0.5
   	return <div className={styles.section}>
   		<div className={styles.sectionHeadingBg}>
 	    	<div className={styles.sectionHeading}>
-	    		<div id={"_" + section.id} style={{position: 'relative', top: offset}}></div>
-	    		<a href={"#" + section.id}>{section.heading}</a>
+	    		<div id={"_" + id} style={{position: 'relative', top: offset}}></div>
+	    		<a href={"#" + id}>{heading}</a>
 	    	</div>
 	    </div>
 	    <div className={styles.sectionMainBg}>
-    		<div className={styles.sectionMain}>{this.props.children}</div>
+    		<div className={styles.sectionMain}>{children}</div>
 	    </div>
    	</div>
   }
