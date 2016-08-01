@@ -80,8 +80,10 @@ export default class App extends Component {
 
   updateScroll(event,newPositions) {
     const positions = newPositions || this.state.positions
-    const topHeadingHeight = (positions.filter(p => p == 'above').length + 0.05) * this.state.rowHeight
-    const bottomHeadingHeight = (positions.filter(p => p == 'below').length + 0.35) * this.state.rowHeight
+    const numTopHeadings = positions.filter(p => p == 'above').length
+    const topHeadingHeight = (numTopHeadings + 0.1) * this.state.rowHeight
+    const numBottomHeadings = positions.filter(p => p == 'below').length
+    const bottomHeadingHeight = (numBottomHeadings + 0.74) * this.state.rowHeight
     const margins = {
       top: topHeadingHeight,
       bottom: bottomHeadingHeight

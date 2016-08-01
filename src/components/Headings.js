@@ -21,7 +21,7 @@ export default class Headings extends Component {
         backgroundColor: props.bgColor, 
         color: props.color, 
         visibility: visible[i] ? undefined : 'hidden', 
-        paddingBottom: (top && onEdge) ? padding : undefined,
+        paddingBottom: ((top && onEdge) || (!top && (i==4))) ? padding : undefined,
         paddingTop: ((!top && onEdge) || (top && (i==0))) ? padding : undefined,
         width: 'calc(100% - ' + props.scrollPad + 'px)'
       }
