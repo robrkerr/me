@@ -3,8 +3,6 @@
   width: 90%;
   margin: 0 auto;
   padding: 1rem 0;
-  font-size: 0.8rem;
-  line-height: 1.6;
 }
 .column {
   flex-grow: 1;
@@ -22,14 +20,16 @@
 }
 .dividerLine {
   width: 50%;
-  height: 150px;
   border-right: 1px solid currentColor;
 }
 .dividerYear {
   width: 100%;
   text-align: center;
-  height: 20px;
-  line-height: 1.5;
+  height: 30px;
+  line-height: 1.65;
+}
+.dividerYear > span {
+  vertical-align: middle;
 }
 .item {
   position: absolute;
@@ -37,12 +37,12 @@
 }
 .itemInner {
   text-align: center;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.8rem;
+  height: calc(100% - 0.5rem);
 }
-.itemBg {
-  background-color: currentColor;
-  opacity: 0.2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.leftColumn .itemInner {
+  background-color: #3f645f;
+}
+.rightColumn .itemInner {
+  background-color: #415466; 
 }

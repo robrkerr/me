@@ -28,7 +28,7 @@
   transition: background-color 500ms ease-in, color 500ms ease-in;
   padding: 1rem 0;
   width: calc(100% - 4rem);
-  height: 16rem;
+  height: 20rem;
   margin: 0 2rem;
 }
 .neuron {
@@ -75,18 +75,27 @@
 }
 .sectionHeadingBg {
   width: 100%;
-  padding-top: 0.8rem;
+  padding: 0.8rem 0;
 }
 .sectionHeading {
   composes: heading;
 }
 .sectionMain {
+  position: relative;
+}
+.sectionMainBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.0));
+}
+.sectionMainContent {
   padding: 1rem 1rem 3rem;
   max-width: 600px; 
   margin: 0 auto; 
   line-height: 1.5rem;
 }
-.sectionMain > *+* {
+.sectionMainContent > *+* {
   margin-top: 0.8rem;
 }
 .sectionHighlight {

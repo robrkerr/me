@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Section from '../Section'
+import ProgrammingList from '../Misc/ProgrammingList'
 import styles from '../styles.css'
 
 export default class Section3 extends Component {
@@ -36,12 +37,18 @@ export default class Section3 extends Component {
         )
       }
       <div>
-        
-        
+        Public things I've worked on or built: <a target="_blank" href="http://anyrhyme.com/">anyrhyme</a>, <a target="_blank" href="http://gifs.surge.sh/">JustGIFs</a> (developed
+        while inspired at a conference) and the <a target="_blank" href="https://github.com/robrkerr/smart-proposals">CFP submission form</a> for 
+        CSSConfAU / JSConfAU 2016 (as described <a target="_blank" href="http://2016.jsconfau.com/2016/07/01/cfp.html#anonymised-description-field">here</a>). 
       </div>
       <div>
-        What experience I want to get... and the sort of projects I enjoy..
+        I have a lot of experience prototyping ideas, learning different frameworks
+        and developing mostly by myself. What I still really want is to get 
+        experience working on a project as part of a team. The project could be 
+        anything but ideally I'd like to be building something involving analytics 
+        and/or data visualisation. 
       </div>
+      <ProgrammingList></ProgrammingList>
     </Section>
   }
 }

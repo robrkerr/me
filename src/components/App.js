@@ -12,14 +12,14 @@ const sections = [
   {
     id: 'contact', 
     heading: 'My name is Robert Kerr', 
-    bgColor: 'hsl(236,10%,15%)', 
+    bgColor: '#191e2b', 
     color: '#dfdfdf',
     content: Section1
   },
   {
     id: 'neuroscience', 
     heading: 'I am a computational neuroscientist', 
-    bgColor: '#070b15', 
+    bgColor: '#1d2121', //'hsl(236,10%,15%)', //'#070b15', 
     color: '#dfdfdf',
     content: Section2
   },
@@ -40,7 +40,7 @@ const sections = [
   {
     id: 'people', 
     heading: 'And working with good people', 
-    bgColor: 'hsl(236,10%,15%)', 
+    bgColor: '#0f1c21',// '#18292c', 
     color: '#dfdfdf',
     content: Section5
   }

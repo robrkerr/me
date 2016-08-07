@@ -33,8 +33,9 @@ export default class Section extends Component {
 	    		<a href={"#" + id}>{heading}</a>
 	    	</div>
 	    </div>
-	    <div className={styles.sectionMainBg}>
-    		<div className={styles.sectionMain}>{children}</div>
+	    <div className={styles.sectionMain}>
+        <div className={styles.sectionMainBg}></div>
+    		<div className={styles.sectionMainContent}>{children}</div>
 	    </div>
    	</div>
   }

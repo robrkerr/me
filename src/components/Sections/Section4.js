@@ -9,7 +9,19 @@ export default class Section4 extends Component {
     const props = {...this.props, id, heading} 
     return <Section {...props}>
 
+      <div>
+        Outside of neuroscience and web development, I'm currently learning about
+        machine learning (in a natural language context), conference organisation, 
+        ... other things i've done before... transport modelling... 
+      </div>
+
+      <div>
+        have a table or viz thing of my 'skills' or areas i've working in / am interested in... 
+      </div>
+      
       <div>And teaching... d3js course...</div>
+
+
 
       <div>Pop-up cardigan craft beer skateboard. Austin helvetica neutra trust fund post-ironic, synth authentic ethical. Seitan neutra jean shorts keffiyeh, DIY cornhole 8-bit artisan swag master cleanse meditation green juice godard occupy cred. Marfa wayfarers fixie cardigan shabby chic lomo. Literally tumblr bespoke pug XOXO, shoreditch 3 wolf moon echo park. Tacos humblebrag fingerstache chambray crucifix lumbersexual. Mumblecore keytar tumblr, slow-carb bespoke four loko four dollar toast.</div>
 

@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionLead {
+  display: flex;
+  flex-direction: row; 
+  padding: 0.5rem 0;
+}
+
+.sectionLine {
+  height: 0.8rem;
+  border-bottom: 1px solid currentColor;
+  display: flex;
+  flex-grow: 1;
+}
+
+.sectionHeading {
+  display: flex;
+  padding: 0 0.6rem;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.sectionItem {
+  display: inline-block;
+  width: 50%;
+}
+
+@media (min-width: 600px) {
+  .sectionItem { width: 33.3%; }
+}
+
+.sectionItemInner {
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0.5rem;
+  white-space: nowrap;
+}
+
+.sectionCurrent {
+  composes: section;
+}
+
+.sectionPrevious {
+  composes: section;
+}
+
+.sectionSome {
+  composes: section;
+}
+
+.sectionLearn {
+  composes: section;
+}
+
+.sectionCurrent .sectionItemInner {
+  background-color: #3f663f;
+}
+
+.sectionPrevious .sectionItemInner {
+  background-color: #3f645f;
+}
+
+.sectionSome .sectionItemInner {
+  background-color: #415466;
+}
+
+.sectionLearn .sectionItemInner {
+  background-color: #483e5c;
+}
