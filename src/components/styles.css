@@ -32,6 +32,7 @@
   margin: 0 2rem;
 }
 .neuron {
+  transition: background-color 500ms ease-in, color 500ms ease-in;
   width: 100%;
   height: 100%;
   background-image: url("/images/gif-dark.gif");
@@ -41,33 +42,43 @@
   background-color: currentColor;
   background-blend-mode: lighten;
 }
-.floatingContainer {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
+.headingsPanel {
   pointer-events: none;
-}
-.floatingContainerInner {
-  position: relative;
-  height: 100%;
- }
-.sectionHeadingBg {
+  position: fixed;
   width: 100%;
-  padding-top: 0.8rem;
 }
-.sectionHeading {
+.headingsTop {
+  composes: headingsPanel;
+  top: 0;
+}
+.headingsBottom {
+  composes: headingsPanel;
+  bottom: 0;
+}
+.headingBg {
+  width: 100%;
+  transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+.heading {
   position: relative;
   width: 100%;
   padding: 0.6rem 1rem;
   height: 1.4rem;
   font-size: 1.1rem;
-  max-width: 600px; 
-  margin: 0 auto; 
+  max-width: 600px;
+  margin: 0 auto;
   font-weight: 400;
 }
-.sectionHeading > a {
+.heading > a {
   pointer-events: auto;
+  text-decoration: none;
+}
+.sectionHeadingBg {
+  width: 100%;
+  padding-top: 0.8rem;
+}
+.sectionHeading {
+  composes: heading;
 }
 .sectionMain {
   padding: 1rem 1rem 3rem;
@@ -100,88 +111,4 @@
 }
 .newSubSection {
   margin-top: 1.6rem;
-}
-.headingsPanel {
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-}
-.headingsTop {
-  composes: headingsPanel;
-  top: 0;
-}
-.headingsBottom {
-  composes: headingsPanel;
-  bottom: 0;
-}
-.headingBg {
-  width: 100%;
-  transition: background-color 500ms ease-in, color 500ms ease-in;
-}
-.heading {
-  position: relative;
-  width: 100%;
-  padding: 0.6rem 1rem;
-  height: 1.4rem;
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  font-weight: 400;
-}
-.heading > a {
-  pointer-events: auto;
-}
-.timeline {
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem 0;
-  font-size: 0.8rem;
-  line-height: 1.6;
-}
-.timelineColumn {
-  flex-grow: 1;
-  position: relative;
-  margin: 0 0.2rem;
-}
-.studyTimeline {
-  composes: timelineColumn;
-}
-.workTimeline {
-  composes: timelineColumn;
-}
-.timelineDivider {
-  width: 4rem;
-}
-.timelineDividerLine {
-  width: 50%;
-  height: 150px;
-  border-right: 1px solid currentColor;
-}
-.timelineDividerYear {
-  width: 100%;
-  text-align: center;
-  height: 20px;
-  line-height: 1.5;
-}
-.timelineItem {
-  position: absolute;
-  width: 100%;
-}
-.timelineItemInner {
-  text-align: center;
-  padding: 0.25rem 0.5rem;
-}
-.timelineItemBg {
-  background-color: currentColor;
-  opacity: 0.2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.studyTimelineItemBg {
-  composes: timelineItemBg;
-}
-.workTimelineItemBg {
-  composes: timelineItemBg;
 }

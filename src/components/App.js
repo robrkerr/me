@@ -54,7 +54,7 @@ export default class App extends Component {
       scroll: {top: 0, bottom: 0},
       margins: {top: 0, bottom: 0},
       positions: sections.map(() => 'below'),
-      width: document.getElementById("app").offsetWidth,
+      width: document.getElementById("app").getBoundingClientRect().width,
       rowHeight: 0,
       scrollPad: 0
     }
@@ -63,7 +63,7 @@ export default class App extends Component {
   componentDidMount() {
     const component = this
     setTimeout(function() {
-      const headingRowHeight = document.getElementsByClassName(styles.sectionHeading)[0].offsetHeight
+      const headingRowHeight = document.getElementsByClassName(styles.sectionHeading)[0].getBoundingClientRect().height
       const scrollable = document.getElementsByClassName(styles.scrollingContainerInner)[0]
       const scrollPad = scrollable.offsetWidth - scrollable.clientWidth
       component.setState({
@@ -81,9 +81,9 @@ export default class App extends Component {
   updateScroll(event,newPositions) {
     const positions = newPositions || this.state.positions
     const numTopHeadings = positions.filter(p => p == 'above').length
-    const topHeadingHeight = (numTopHeadings + 0.1) * this.state.rowHeight
+    const topHeadingHeight = numTopHeadings * this.state.rowHeight
     const numBottomHeadings = positions.filter(p => p == 'below').length
-    const bottomHeadingHeight = (numBottomHeadings + 0.74) * this.state.rowHeight
+    const bottomHeadingHeight = (numBottomHeadings + 1.6/2.6) * this.state.rowHeight
     const margins = {
       top: topHeadingHeight,
       bottom: bottomHeadingHeight

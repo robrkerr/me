@@ -36,7 +36,8 @@ export default class Section3 extends Component {
         )
       }
       <div>
-        Technologies, languages, libraries that I've used or want to learn...
+        
+        
       </div>
       <div>
         What experience I want to get... and the sort of projects I enjoy..
