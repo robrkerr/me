@@ -15,12 +15,15 @@ function animateScrollToTarget(element,target,duration) {
   scrollNext(element,scrollToValue,steps-1,steps,duration/steps);
 }
 
-$('document').ready(function(){
+window.onload = function() {
   var element = document.body
   var target = document.getElementById("_" + window.location.hash.slice(1));
   if (target) { setTimeout(function() { animateScrollToTarget(element,target,100); }, 500); }
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    var target = document.getElementById("_" + this.hash.slice(1));
-    animateScrollToTarget(element,target,500);
-  });
-});
+  var links = document.querySelectorAll('a[href*="#"]:not([href="#"])');
+  for (var i = 0; i < links.length; i++) {
+    links[i].onclick = function() {
+      var target = document.getElementById("_" + this.hash.slice(1));
+      animateScrollToTarget(element,target,500);
+    };
+  };
+};
