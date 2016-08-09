@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Section from '../Section'
+import SkillsList from '../Misc/SkillsList'
 import styles from '../styles.css'
 
 export default class Section4 extends Component {
@@ -20,6 +21,8 @@ export default class Section4 extends Component {
       </div>
       
       <div>And teaching... d3js course...</div>
+
+      <SkillsList></SkillsList>
 
 
 

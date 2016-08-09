@@ -2,7 +2,13 @@
   display: flex;
   width: 90%;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 2rem 0;
+}
+@media (max-width: 599px) {
+  .container { 
+    font-size: 0.8rem; 
+    line-height: 1.4; 
+  }
 }
 .column {
   flex-grow: 1;
@@ -23,13 +29,13 @@
   border-right: 1px solid currentColor;
 }
 .dividerYear {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   text-align: center;
   height: 30px;
   line-height: 1.65;
-}
-.dividerYear > span {
-  vertical-align: middle;
 }
 .item {
   position: absolute;
@@ -37,8 +43,8 @@
 }
 .itemInner {
   text-align: center;
-  padding: 0.25rem 0.8rem;
-  height: calc(100% - 0.5rem);
+  padding: 5px 0.8rem;
+  height: calc(100% - 10px);
 }
 .leftColumn .itemInner {
   background-color: #3f645f;

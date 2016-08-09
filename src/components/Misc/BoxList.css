@@ -12,25 +12,25 @@
   flex-direction: column;
 }
 
-.sectionLead {
+.headingBox {
   display: flex;
   flex-direction: row; 
   padding: 0.5rem 0;
 }
 
-.sectionLine {
+.headingLine {
   height: 0.8rem;
   border-bottom: 1px solid currentColor;
   display: flex;
   flex-grow: 1;
 }
 
-.sectionHeading {
+.heading {
   display: flex;
   padding: 0 0.6rem;
 }
 
-.sectionList {
+.list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -38,50 +38,56 @@
   margin-bottom: 1rem;
 }
 
-.sectionItem {
+.item {
   display: inline-block;
   width: 50%;
 }
 
-@media (min-width: 600px) {
-  .sectionItem { width: 33.3%; }
+.itemWide {
+  display: inline-block;
+  width: 100%;
 }
 
-.sectionItemInner {
+@media (min-width: 600px) {
+  .item { width: 33.3%; }
+  .itemWide { width: 50%; }
+}
+
+.itemInner {
   text-align: center;
   padding: 0.5rem 0;
   margin: 0.5rem;
   white-space: nowrap;
 }
 
-.sectionCurrent {
+.sectionGreen {
   composes: section;
 }
 
-.sectionPrevious {
+.sectionTeal {
   composes: section;
 }
 
-.sectionSome {
+.sectionBlue {
   composes: section;
 }
 
-.sectionLearn {
+.sectionPurple {
   composes: section;
 }
 
-.sectionCurrent .sectionItemInner {
+.sectionGreen .itemInner {
   background-color: #3f663f;
 }
 
-.sectionPrevious .sectionItemInner {
+.sectionTeal .itemInner {
   background-color: #3f645f;
 }
 
-.sectionSome .sectionItemInner {
+.sectionBlue .itemInner {
   background-color: #415466;
 }
 
-.sectionLearn .sectionItemInner {
+.sectionPurple .itemInner {
   background-color: #483e5c;
 }
