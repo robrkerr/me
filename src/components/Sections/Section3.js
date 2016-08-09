@@ -48,6 +48,10 @@ export default class Section3 extends Component {
         anything but ideally I'd like to be building something involving analytics 
         and/or data visualisation. 
       </div>
+      <div>
+        Here are some different languages, frameworks, libraries and technologies 
+        that I am familiar with or would like to try out: 
+      </div>
       <ProgrammingList></ProgrammingList>
     </Section>
   }
