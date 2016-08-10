@@ -11,16 +11,14 @@ var plugins = [
 
 if (!DEV_MODE) {
   plugins = plugins.concat([
-      new webpack.optimize.DedupePlugin(),
-      // new webpack.optimize.UglifyJsPlugin({
-      //   minimize: true,
-      //   compressor: {
-      //     warnings: false,
-      //   },
-      // }),
-      new webpack.DefinePlugin({
-          'process.env.NODE_ENV': JSON.stringify('production'),
-      }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compressor: {warnings: false}
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    })
   ]);
 }
 

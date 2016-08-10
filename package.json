@@ -1,5 +1,5 @@
 {
-  "name": "scrolling",
+  "name": "cv",
   "scripts": {
     "test": "webpack",
     "start": "NODE_ENV=development webpack-dev-server --port=7777 --content-base public/ --hot --inline",

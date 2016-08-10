@@ -9,6 +9,7 @@ export default class Section3 extends Component {
     const { id, heading } = this.props.section
     const props = {...this.props, id, heading} 
     const { width } = this.props
+    const { imageStyle } = this.props
     return <Section {...props}>
       <div>
         I first got into web development towards the end of my PhD by
@@ -20,6 +21,13 @@ export default class Section3 extends Component {
         Since then, I joined IBM Research and started doing web development
         as part of my job. This work has included... 
       </div>
+      {
+        // <div className={styles.scienceBox} style={imageStyle}>
+        //   <div className={styles.science} style={imageStyle}></div>
+        //   Courtsey of filtercake (http://webgram.co/p/8At_6ztmn6)
+        // </div>
+        null
+      }
       <div>
         I've also been lucky enough to present some of my work at international
         JavaScript conferences: RejectJS in Berlin (2015) and JSConfBP in 

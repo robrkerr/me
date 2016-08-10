@@ -7,19 +7,19 @@ export default class ProgrammingList extends Component {
     const sections = [{
       theme: styles.sectionGreen,
       heading: "I'm currently proficient with",
-      list: ['React','Git','NodeJS','Python','d3','threejs','SQL','Postgres','Docker','CouchDB']
+      list: ['React','d3.js','three.js','Node','SQL','Postgres','CouchDB','Python','Matlab','Docker','Git']
     }, {
       theme: styles.sectionTeal,
       heading: "I used to be proficient with",
-      list: ['Ruby on Rails','AngularJS']
+      list: ['Ruby on Rails','Angular']
     }, {
       theme: styles.sectionBlue,
       heading: "I've somewhat worked with",
-      list: ['Redux/Flux','Haskell','C++']
+      list: ['Redux/Flux','Haskell','C++','Openstack']
     }, {
       theme: styles.sectionPurple,
       heading: "I've been wanting to try out",
-      list: ['Mobx','GraphQL','Relay']
+      list: ['Mobx','GraphQL','Relay','Ansible']
     }]
     return <div className={styles.container}>
       { sections.map(section => {

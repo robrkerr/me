@@ -7,7 +7,7 @@ export default class SkillsList extends Component {
     const sections = [{
       theme: styles.sectionGreen,
       heading: "I have a lot of experience with",
-      list: ['Mathematical Modelling','Data Visualisation','Teaching','Speaking']
+      list: ['Mathematical Modelling','Data Visualisation','Scientific Analysis','Teaching','Speaking']
     }, {
       theme: styles.sectionTeal,
       heading: "I have some experience with",
@@ -15,7 +15,7 @@ export default class SkillsList extends Component {
     }, {
       theme: styles.sectionPurple,
       heading: "I'd like to learn about",
-      list: ['Natural Language Processing']
+      list: ['Natural Language Processing','Aesthetic Design','Test-Driven Development']
     }]
     return <div className={styles.container}>
       { sections.map(section => {

@@ -1,4 +1,0 @@
-- add proper content
-- bigger (and fewer lines)
-- css modules
-- try to remove ios browser bar
