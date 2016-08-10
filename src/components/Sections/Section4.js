@@ -9,23 +9,29 @@ export default class Section4 extends Component {
     const { id, heading } = this.props.section
     const props = {...this.props, id, heading} 
     return <Section {...props}>
-
       <div>
-        Outside of neuroscience and web development, I'm currently learning about
-        machine learning (in a natural language context), conference organisation, 
-        ... other things i've done before... transport modelling... 
-      </div>
-      <div>And teaching... d3js course...</div>
-      <div>
-        Outside of neuroscience and web development, here are a few areas that I 
-        either know well and would like to continue developing, or that I am not as
-        familiar with but would like to learn about:
+        And neuroscience and web development are both great for this. Neuroscience
+        because it is such a complex domain with so much known and even more 
+        yet to be known, and web development because the technologies and practises
+        are so rapidly changing and evolving. But outside of these two fields there
+        are many other things that I've invested time in and want to invest more 
+        time in:
       </div>
       <SkillsList></SkillsList>
-
-      <div>Pop-up cardigan craft beer skateboard. Austin helvetica neutra trust fund post-ironic, synth authentic ethical. Seitan neutra jean shorts keffiyeh, DIY cornhole 8-bit artisan swag master cleanse meditation green juice godard occupy cred. Marfa wayfarers fixie cardigan shabby chic lomo. Literally tumblr bespoke pug XOXO, shoreditch 3 wolf moon echo park. Tacos humblebrag fingerstache chambray crucifix lumbersexual. Mumblecore keytar tumblr, slow-carb bespoke four loko four dollar toast.</div>
-
-      <div>Heirloom intelligentsia readymade XOXO VHS. Bicycle rights drinking vinegar street art scenester. Wolf man bun salvia kogi. Mixtape crucifix keytar, williamsburg helvetica twee 3 wolf moon cray mlkshk deep v. Hoodie pop-up pickled biodiesel. Pinterest crucifix skateboard, scenester sartorial blog listicle before they sold out 8-bit lo-fi health goth typewriter cornhole franzen. Heirloom typewriter blue bottle chartreuse fingerstache cronut.</div>
+      <div>
+        About... mathematical modelling, scientific analysis, transport modelling... and data visulisation...
+      </div>
+      <div>
+        About teaching... d3js course...  
+        (here are the <a target="_blank" href="http://isakiko.github.io/D3-visualising-data/">course notes</a>)
+        conference organisation...
+      </div>
+      <div>
+        About machine learning (in a natural language context), 
+      </div>
+      <div>
+        About other things... software (functional programming... design...)
+      </div>      
     </Section>
   }
 }
