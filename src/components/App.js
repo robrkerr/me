@@ -59,6 +59,17 @@ function getPageScroll() {
   }
 }
 
+function getMargins(positions, rowHeight) {
+  const numTopHeadings = positions.filter(p => p == 'above').length
+  const topHeadingHeight = numTopHeadings * rowHeight
+  const numBottomHeadings = positions.filter(p => p == 'below').length
+  const bottomHeadingHeight = (numBottomHeadings + 1.6/2.6) * rowHeight
+  return {
+    top: topHeadingHeight,
+    bottom: bottomHeadingHeight
+  }
+}
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -92,25 +103,20 @@ export default class App extends Component {
   }
 
   updateScroll(event,newPositions) {
-    const positions = newPositions || this.state.positions
-    const numTopHeadings = positions.filter(p => p == 'above').length
-    const topHeadingHeight = numTopHeadings * this.state.rowHeight
-    const numBottomHeadings = positions.filter(p => p == 'below').length
-    const bottomHeadingHeight = (numBottomHeadings + 1.6/2.6) * this.state.rowHeight
-    const margins = {
-      top: topHeadingHeight,
-      bottom: bottomHeadingHeight
-    }
     if (newPositions == undefined) {
       var pageScroll = getPageScroll();
-      this.setState({
-        scroll: {
-          top: pageScroll,
-          bottom: pageScroll + window.innerHeight
-        },
-        margins: margins
-      })
+      if (this.state.scroll.top !== pageScroll) {
+        const margins = getMargins(this.state.positions, this.state.rowHeight);
+        this.setState({
+          scroll: {
+            top: pageScroll,
+            bottom: pageScroll + window.innerHeight
+          },
+          margins: margins
+        })
+      }
     } else {
+      const margins = getMargins(newPositions, this.state.rowHeight)
       this.setState({
         margins: margins,
         positions: newPositions
