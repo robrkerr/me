@@ -7,7 +7,7 @@ export default class ProgrammingList extends Component {
     const sections = [{
       theme: styles.sectionGreen,
       heading: "I'm currently proficient with",
-      list: ['React','d3.js','three.js','Node','SQL','Postgres','CouchDB','Python','Matlab','Docker','Git']
+      list: ['React','d3.js','three.js','Node','SQL','Postgres','CouchDB','Bash','Python','Matlab','Docker','Git']
     }, {
       theme: styles.sectionTeal,
       heading: "I used to be proficient with",

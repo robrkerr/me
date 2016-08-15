@@ -24,13 +24,15 @@ export default class Section extends Component {
 	}
 
   render() {
-  	const { id, heading, index, rowHeight, children } = this.props
+  	const { id, heading, index, rowHeight, mainStyle, highlightStyle, positions, children } = this.props
   	const offset = -index*rowHeight - rowHeight*0.5
+    // const headingStyle = (positions[index] == 'within') ? {...mainStyle, position: 'relative', zIndex: 1} : mainStyle;
+    const headingStyle = {}
   	return <div className={styles.section}>
-  		<div className={styles.sectionHeadingBg}>
+  		<div className={styles.sectionHeadingBg} style={headingStyle}>
 	    	<div className={styles.sectionHeading}>
 	    		<div id={"_" + id} style={{position: 'relative', top: offset}}></div>
-	    		<a href={"#" + id}>{heading}</a>
+	    		<a href={"#" + id} style={highlightStyle}>{heading}</a>
 	    	</div>
 	    </div>
 	    <div className={styles.sectionMain}>

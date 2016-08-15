@@ -15,6 +15,7 @@ html {
 b, a {
   font-weight: 400;
   color: hsl(40,0%,90%);
+  transition: color 500ms ease-in;
 }
 @media (min-height: 550px) and (min-width: 400px) {
   html { font-size: 17px; }

@@ -19,11 +19,11 @@ export default class Headings extends Component {
       const onEdge = edgePanel && (edgePanel.id == section.id)
       return {
         backgroundColor: props.bgColor, 
-        color: props.color, 
         visibility: visible[i] ? undefined : 'hidden', 
         paddingBottom: ((top && onEdge) || (!top && (i==4))) ? padding : undefined,
         paddingTop: ((!top && onEdge) || (top && (i==0))) ? padding : undefined,
         width: 'calc(100% - ' + props.scrollPad + 'px)'
+        // boxShadow: (top && onEdge) ? 'rgba(0,0,0,0.4) 0 5px 5px 0' : undefined
       }
     }
     return <div className={styles["headings" + props.type]}>
@@ -31,7 +31,7 @@ export default class Headings extends Component {
     		props.list.map((section,i) => {
     			return <div key={i} className={styles.headingBg} style={headingStyle(section,i)}>
     				<div className={styles.heading}>
-    					<a href={"#" + section.id}>{section.heading}</a>
+    					<a href={"#" + section.id} style={{color: props.color}}>{section.heading}</a>
     				</div>
     			</div>
     		})

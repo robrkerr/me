@@ -13,35 +13,40 @@ const sections = [
     id: 'contact', 
     heading: 'My name is Robert Kerr', 
     bgColor: '#191e2b', 
-    color: '#dfdfdf',
+    textColor: '#dfdfdf',
+    highlightColor: 'hsl(42,100%,95%)',
     content: Section1
   },
   {
     id: 'neuroscience', 
     heading: 'I am a computational neuroscientist', 
     bgColor: '#1d2121', //'hsl(236,10%,15%)', //'#070b15', 
-    color: '#dfdfdf',
+    textColor: '#dfdfdf',
+    highlightColor: '#9cf29c',
     content: Section2
   },
   {
     id: 'web', 
     heading: 'And more recently a web developer', 
     bgColor: '#041a1a', 
-    color: '#dfdfdf',
+    textColor: '#dfdfdf',
+    // highlightColor: '#b4fdfd',
     content: Section3
   },
   {
     id: 'learning', 
     heading: 'I enjoy learning new things', 
     bgColor: '#151019', 
-    color: '#dfdfdf',
+    textColor: '#dfdfdf',
+    // highlightColor: '#e6c6ff',
     content: Section4
   },
   {
     id: 'people', 
     heading: 'And working with good people', 
     bgColor: '#0f1c21',// '#18292c', 
-    color: '#dfdfdf',
+    textColor: '#dfdfdf',
+    // highlightColor: 'limegreen',
     content: Section5
   }
 ]
@@ -79,7 +84,7 @@ export default class App extends Component {
         scrollPad: scrollPad
       })
     }, 500)
-    window.addEventListener('scroll', this.updateScroll)
+    window.addEventListener('scroll', this.updateScroll, {passive: true})
   }
 
   componentWillUnmount() {
@@ -127,9 +132,11 @@ export default class App extends Component {
     const belowSections = sectionList.filter(s => s.below)
     const currentSection = aboveSections[aboveSections.length-1] || withinSections[0] || belowSections[0]
     const currentBgColor = currentSection.bgColor
-    const currentColor = currentSection.color
-    const mainStyle = {backgroundColor: currentBgColor, color: currentColor};
-    const imageStyle = {backgroundColor: currentBgColor, color: currentBgColor};
+    const currentTextColor = currentSection.textColor
+    const currentHighlightColor = currentSection.highlightColor
+    const mainStyle = {backgroundColor: currentBgColor, color: currentTextColor}
+    const imageStyle = {backgroundColor: currentBgColor, color: currentBgColor}
+    const highlightStyle = {color: currentHighlightColor}
     document.documentElement.style['background-color'] = (aboveSections.length > 0) ? currentBgColor : "hsl(40,100%,98%)";
     const componentState = this.state
     return (
@@ -150,6 +157,8 @@ export default class App extends Component {
                 rowHeight: componentState.rowHeight,
                 onEnterExit: onEnterExit,
                 imageStyle: imageStyle,
+                highlightStyle: highlightStyle,
+                mainStyle: mainStyle,
                 width: componentState.width
               }
               const Element = section.content
@@ -157,8 +166,8 @@ export default class App extends Component {
             })
           }          
         </div>
-        <Headings type="Top" list={sectionList} scrollPad={this.state.scrollPad} color={currentColor} bgColor={currentBgColor} />
-        <Headings type="Bottom" list={sectionList} scrollPad={this.state.scrollPad} color={currentColor} bgColor={currentBgColor} />
+        <Headings type="Top" list={sectionList} scrollPad={this.state.scrollPad} color={currentHighlightColor} bgColor={currentBgColor} />
+        <Headings type="Bottom" list={sectionList} scrollPad={this.state.scrollPad} color={currentHighlightColor} bgColor={currentBgColor} />
       </div>
     );
   }

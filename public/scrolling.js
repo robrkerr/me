@@ -21,9 +21,9 @@ window.onload = function() {
   if (target) { setTimeout(function() { animateScrollToTarget(element,target,100); }, 500); }
   var links = document.querySelectorAll('a[href*="#"]:not([href="#"])');
   for (var i = 0; i < links.length; i++) {
-    links[i].onclick = function() {
+    links[i].addEventListener('click', function() {
       var target = document.getElementById("_" + this.hash.slice(1));
       animateScrollToTarget(element,target,500);
-    };
+    }, {passive: true});
   };
 };
