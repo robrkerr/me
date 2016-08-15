@@ -22,9 +22,9 @@ export default class ProgrammingList extends Component {
       list: ['Mobx','GraphQL','Relay','Ansible']
     }]
     return <div className={styles.container}>
-      { sections.map(section => {
+      { sections.map((section,i) => {
         return (
-          <div className={section.theme}>
+          <div key={i} className={section.theme}>
             <div className={styles.headingBox}>
               <div className={styles.headingLine}></div>
               <div className={styles.heading}>{section.heading}</div>
@@ -32,8 +32,8 @@ export default class ProgrammingList extends Component {
             </div>
             <div className={styles.list}>
               {
-                section.list.map(item => (
-                  <div className={styles.item}>
+                section.list.map((item,j) => (
+                  <div key={j} className={styles.item}>
                     <div className={styles.itemInner}>{item}</div>
                   </div>
                 ))
