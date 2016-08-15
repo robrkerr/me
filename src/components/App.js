@@ -46,6 +46,14 @@ const sections = [
   }
 ]
 
+function getPageScroll() {
+  if (window.pageYOffset != undefined) {
+    return pageYOffset;
+  } else {
+    return document.documentElement.scrollTop || document.body.scrollTop || 0;
+  }
+}
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -89,11 +97,11 @@ export default class App extends Component {
       bottom: bottomHeadingHeight
     }
     if (newPositions == undefined) {
-      const scrollingElement = document.body
+      var pageScroll = getPageScroll();
       this.setState({
         scroll: {
-          top: scrollingElement.scrollTop,
-          bottom: scrollingElement.scrollTop + window.innerHeight
+          top: pageScroll,
+          bottom: pageScroll + window.innerHeight
         },
         margins: margins
       })
