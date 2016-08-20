@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import Section from '../Section'
-import styles from '../styles.css'
+import Section from './Section'
+import styles from './Sections.css'
 
 export default class Section5 extends Component {
 

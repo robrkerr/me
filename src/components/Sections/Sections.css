@@ -1,0 +1,77 @@
+
+.sectionHeadingBg {
+  width: 100%;
+  padding: 0.8rem 0;
+}
+
+.sectionHeading {
+  composes: heading from '../Headings/Headings.css';
+}
+
+.sectionMain {
+  position: relative;
+}
+
+.sectionMainBg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.00) 0px, 
+    rgba(0,0,0,0.00) 50px, 
+    rgba(0,0,0,0.10) 150px, 
+    rgba(0,0,0,0.20) 300px, 
+    rgba(0,0,0,0.30) 400px,
+    rgba(0,0,0,0.35) 425px,
+    rgba(0,0,0,0.38) 450px,
+    rgba(0,0,0,0.40) 500px
+  );
+  pointer-events: none;
+}
+
+.sectionMainContent {
+  padding: 1.5rem 1rem 3rem;
+  max-width: 600px; 
+  margin: 0 auto; 
+  line-height: 1.5rem;
+}
+
+.sectionMainContent > *+* {
+  margin-top: 0.8rem;
+}
+
+.behind {}
+
+.sectionMainContent > :not(.behind) {
+  position: relative;
+}
+
+.sectionHighlight {
+  padding: 0 1rem;
+  font-weight: 400;
+  display: flex;
+  width: 100%;
+}
+
+@media (min-height: 550px) and (min-width: 400px) {
+  .sectionHighlight { padding: 0 1.5rem; }
+}
+
+@media (min-height: 650px) and (min-width: 600px) {
+  .sectionHighlight { padding: 0 2rem; }
+}
+
+.sectionFieldLabel {
+  width: 5.5rem;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.sectionFieldValue {
+  display: flex;
+}
+
+.newSubSection {
+  margin-top: 1.6rem;
+}

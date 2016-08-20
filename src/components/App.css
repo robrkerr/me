@@ -1,0 +1,10 @@
+.container {
+  padding: 0 0 600px;
+  color: hsl(40,0%,80%);
+  transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+.topPanel {
+  background-color: hsl(40,100%,98%);
+  color: hsl(40,100%,98%);
+  padding: 0 0 5vh;
+}

@@ -1,13 +1,17 @@
 import React, {Component} from 'react'
-import Section from '../Section'
-import styles from '../styles.css'
+import Section from './Section'
+import styles from './Sections.css'
+import imageStyles from '../Misc/images.css'
 
 export default class Section2 extends Component {
 
   render() {
     const { id, heading } = this.props.section
     const props = {...this.props, id, heading} 
-    const { imageStyle } = this.props
+    const imageStyle = {
+      backgroundColor: props.colors.background,
+      color: props.colors.background
+    }
     return <Section {...props}>
       <div>
         Neuroscience is something I became interested towards the end
@@ -32,8 +36,8 @@ export default class Section2 extends Component {
         of neurons could be encoding information and how this could affect 
         the way in which they manipulating information flowing through them. 
       </div>
-      <div className={styles.neuronBox} style={imageStyle}>
-        <div className={styles.neuron} style={imageStyle}></div>
+      <div className={imageStyles.neuron} style={imageStyle}>
+        <div style={imageStyle}></div>
       </div>
       <div>
         After my PhD, I joined IBM Research Australia, where I transitioned 

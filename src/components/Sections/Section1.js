@@ -1,11 +1,7 @@
 import React, {Component} from 'react'
-import Section from '../Section'
+import Section from './Section'
 import Timeline from '../Misc/Timeline'
-import * as d3 from 'd3'
-import styles from '../styles.css'
-
-const yearScale = d3.scaleLinear().domain([2004.75, 2016.5]).range([0, 100*11.75])
-const timeScale = d3.scaleLinear().domain([0, 1]).range([0, 100])
+import styles from './Sections.css'
 
 export default class Section1 extends Component {
 

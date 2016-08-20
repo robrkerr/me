@@ -1,0 +1,53 @@
+.face {
+  position: relative;
+  max-width: 620px; 
+  margin: 0 auto; 
+  padding: 0 0.5rem; 
+}
+.face > div {
+  box-shadow: inset 0 0 0.7rem 0.7rem hsl(40,100%,98%);
+  width: 14rem;
+  height: 14rem;
+  background-image: url("/images/my-face.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: currentColor;
+  background-blend-mode: multiply;
+}
+.neuron {
+  composes: behind from '../Sections/Sections.css';
+  transition: background-color 500ms ease-in, color 500ms ease-in;
+  padding: 1rem 0;
+  width: calc(100% - 4rem);
+  height: 20rem;
+  margin: 0 2rem;
+}
+.neuron > div {
+  transition: background-color 500ms ease-in, color 500ms ease-in;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/neuron.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 40%;
+  background-color: currentColor;
+  background-blend-mode: lighten;
+}
+.science {
+  transition: background-color 500ms ease-in, color 500ms ease-in;
+  padding: 1rem 0;
+  width: calc(100% - 4rem);
+  height: 20rem;
+  margin: 0 2rem;
+}
+.science > div {
+  transition: background-color 500ms ease-in, color 500ms ease-in;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/science-in-the-browser.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 50%;
+  background-color: currentColor;
+  background-blend-mode: lighten;
+}

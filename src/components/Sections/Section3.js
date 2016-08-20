@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Section from '../Section'
+import Section from './Section'
 import ProgrammingList from '../Misc/ProgrammingList'
-import styles from '../styles.css'
+import styles from './Sections.css'
 
 export default class Section3 extends Component {
 

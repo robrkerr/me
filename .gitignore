@@ -3,3 +3,4 @@ public/bundle.js
 public/styles.css
 notes.txt
 .DS_Store
+*.doc*

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import styles from './styles.css'
+import styles from './Sections.css'
 
 export default class Section extends Component {
 
@@ -24,12 +24,11 @@ export default class Section extends Component {
 	}
 
   render() {
-  	const { id, heading, index, rowHeight, mainStyle, highlightStyle, positions, children } = this.props
+  	const { id, heading, index, rowHeight, colors, positions, children } = this.props
   	const offset = -index*rowHeight - rowHeight*0.5
-    // const headingStyle = (positions[index] == 'within') ? {...mainStyle, position: 'relative', zIndex: 1} : mainStyle;
-    const headingStyle = {}
+    const highlightStyle = {color: colors.highlight}
   	return <div className={styles.section}>
-  		<div className={styles.sectionHeadingBg} style={headingStyle}>
+  		<div className={styles.sectionHeadingBg}>
 	    	<div className={styles.sectionHeading}>
 	    		<div id={"_" + id} style={{position: 'relative', top: offset}}></div>
 	    		<a href={"#" + id} style={highlightStyle}>{heading}</a>
