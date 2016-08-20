@@ -1,9 +1,11 @@
+
 .face {
   position: relative;
   max-width: 620px; 
   margin: 0 auto; 
   padding: 0 0.5rem; 
 }
+
 .face > div {
   box-shadow: inset 0 0 0.7rem 0.7rem hsl(40,100%,98%);
   width: 14rem;
@@ -14,14 +16,16 @@
   background-color: currentColor;
   background-blend-mode: multiply;
 }
+
 .neuron {
   composes: behind from '../Sections/Sections.css';
   transition: background-color 500ms ease-in, color 500ms ease-in;
   padding: 1rem 0;
   width: calc(100% - 4rem);
-  height: 20rem;
+  height: 30rem;
   margin: 0 2rem;
 }
+
 .neuron > div {
   transition: background-color 500ms ease-in, color 500ms ease-in;
   width: 100%;
@@ -33,6 +37,7 @@
   background-color: currentColor;
   background-blend-mode: lighten;
 }
+
 .science {
   transition: background-color 500ms ease-in, color 500ms ease-in;
   padding: 1rem 0;
@@ -40,6 +45,7 @@
   height: 20rem;
   margin: 0 2rem;
 }
+
 .science > div {
   transition: background-color 500ms ease-in, color 500ms ease-in;
   width: 100%;
@@ -50,4 +56,20 @@
   background-position-x: 50%;
   background-color: currentColor;
   background-blend-mode: lighten;
+}
+
+.cfp {
+  width: calc(100% - 4rem);
+  height: 30rem;
+  margin: 2rem 2rem;
+}
+
+.cfp > div {
+  width: 100%;
+  height: calc(100% - 2rem);
+  background-image: url("/images/cfp-form.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(0, 0%, 94%);
+  background-blend-mode: darken;
 }

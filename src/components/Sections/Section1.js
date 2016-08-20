@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Section from './Section'
 import Timeline from '../Misc/Timeline'
+import Link from '../Misc/Link'
 import styles from './Sections.css'
 
 export default class Section1 extends Component {
@@ -13,14 +14,10 @@ export default class Section1 extends Component {
         And this is my story.
       </div>
       <div>
-        Just want a regular, printable cv? <a target="_blank" href="/cv.pdf">Here you go.</a>
+        Just want a regular, printable cv? <Link text="Here you go." href="/cv.pdf"/>
       </div>
       <div>
-        I am a scientific researcher who lives in Melbourne (Australia) 
-        and has recently transitioned into web development. I'm particularly 
-        interested in how data and ideas are visualised and presented. This 
-        website is a reflection of that and was an opportunity for me to improve 
-        and demonstrate my skills in building things for the web. 
+        I am a scientific researcher who lives in Melbourne (Australia) and has recently transitioned into web development. I like programming, maths, technology, and interesting problems, but I’m particularly interested in how data and ideas are visualised and presented. This website is a reflection of that and was an opportunity for me to improve and demonstrate my skills in building things for the web. 
       </div>
       <div className={styles.newSubSection}>
         You can contact me by email or phone, and find me on Twitter and GitHub:
