@@ -107,7 +107,8 @@ export default class App extends Component {
               const Element = section.content
               return <Element {...props} />
             })
-          }   
+          } 
+          <div className={styles.bottomPanel}></div>
         </div>
         <TopHeadings list={sectionList} scrollPad={this.state.scrollPad} colors={colors} />
         <BottomHeadings list={sectionList} scrollPad={this.state.scrollPad} colors={colors} />
