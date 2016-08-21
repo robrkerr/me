@@ -30,6 +30,7 @@ export function getColors(sectionList) {
   const withinSections = sectionList.filter(s => !s.above && !s.below)
   const belowSections = sectionList.filter(s => s.below)
   const anyAbove = aboveSections.length > 0
+  const allAbove = aboveSections.length == sectionList.length
   const lastAbove = aboveSections[aboveSections.length-1]
   const firstWithinOrBelow = withinSections[0] || belowSections[0]
   const currentSection = lastAbove || firstWithinOrBelow
@@ -37,6 +38,6 @@ export function getColors(sectionList) {
     background: currentSection.bgColor,
     text: currentSection.textColor,
     highlight: currentSection.highlightColor,
-    docBackground: anyAbove ? currentSection.bgColor : "hsl(40,100%,98%)"
+    docBackground: anyAbove ? currentSection.darkBgColor : "hsl(40,100%,98%)"
   }
 }

@@ -9,6 +9,7 @@ export default [
     id: 'contact', 
     heading: 'My name is Robert Kerr', 
     bgColor: '#191e2b', 
+    darkBgColor: '#0f1219',
     textColor: '#dfdfdf',
     // highlightColor: 'hsl(42,100%,95%)',
     content: Section1
@@ -17,6 +18,7 @@ export default [
     id: 'neuroscience', 
     heading: 'I am a computational neuroscientist', 
     bgColor: '#041a1a', 
+    darkBgColor: '#020f0f',
     textColor: '#dfdfdf',
     // highlightColor: '#d9db7b',
     content: Section2
@@ -25,6 +27,7 @@ export default [
     id: 'web', 
     heading: 'And more recently a web developer', 
     bgColor: '#1d2121', 
+    darkBgColor: '#111313',
     textColor: '#dfdfdf',
     // highlightColor: '#9cf29c',
     content: Section3
@@ -33,6 +36,7 @@ export default [
     id: 'learning', 
     heading: 'I enjoy learning new things', 
     bgColor: '#151019', 
+    darkBgColor: '#0c090f',
     textColor: '#dfdfdf',
     // highlightColor: '#fff0f9',
     content: Section4
