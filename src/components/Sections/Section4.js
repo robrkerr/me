@@ -6,7 +6,8 @@ import styles from './Sections.css'
 
 const urls = {
   d3course: "http://isakiko.github.io/D3-visualising-data/",
-  alphaGo: "http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html"
+  alphaGo: "http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html",
+  meRepo: "https://github.com/robrkerr/me"
 }
 
 export default class Section4 extends Component {
@@ -28,8 +29,29 @@ export default class Section4 extends Component {
       <div>
         I'm excited by machine learning and data analysis, and have a broad familiarity with various techniques, such as linear regression, PCA, genetic algorithms, and clustering. I have also recently been learning about new machine learning techniques being developed for <Link text="AlphaGo" href={urls.alphaGo}/> (deep learning mixed with Monte Carlo tree search) and in natural language processing (word embeddings like word2vec) and find these to be fascinating areas. 
       </div>
+      <div style={{marginTop: '2.4rem'}}>
+        Anyway that's me. Get in contact if you'd like to chat:
+      </div>
       <div>
-        Somthing to finish with... maybe contact details again...
+        <span className={styles.sectionHighlight}>
+          <span className={styles.sectionFieldLabel}>Email: </span>
+          <span className={styles.sectionFieldValue}>robrkerr@gmail.com</span>
+        </span>
+        <span className={styles.sectionHighlight}>
+          <span className={styles.sectionFieldLabel}>Phone: </span>
+          <span className={styles.sectionFieldValue}>(+61) 431 587 997</span>
+        </span>
+        <span className={styles.sectionHighlight}>
+          <span className={styles.sectionFieldLabel}>Twitter: </span>
+          <span className={styles.sectionFieldValue}>@robrkerr</span>
+        </span>
+        <span className={styles.sectionHighlight}>
+          <span className={styles.sectionFieldLabel}>GitHub: </span>
+          <span className={styles.sectionFieldValue}>@robrkerr</span>
+        </span>
+      </div>
+      <div>
+        And finally, <Link text="here's" href={urls.meRepo}/> the code behind this page is you're interested.  
       </div>
     </Section>
   }
