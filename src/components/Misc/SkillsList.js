@@ -14,8 +14,8 @@ export default class SkillsList extends Component {
       list: ['Machine Learning','Functional Programming']
     }, {
       theme: styles.sectionPurple,
-      heading: "I'd like to learn about",
-      list: ['Natural Language Processing','Aesthetic Design']
+      heading: "I'd like to learn about or get better at",
+      list: ['Natural Language Processing','Design','Testing Code']
     }]
     return <div className={styles.container}>
       { sections.map((section,i) => {

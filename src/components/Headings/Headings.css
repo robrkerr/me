@@ -17,19 +17,19 @@
 .edge {}
 
 .topPanel > .edge {
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
 }
 
 .bottomPanel > .edge {
-  padding-top: 0.8rem;
+  padding-top: 0.6rem;
 }
 
 .topPanel > .container:first-child {
-  padding-top: 0.8rem; 
+  padding-top: 0.6rem; 
 }
 
 .bottomPanel > .container:last-child {
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
 }
 
 .container {

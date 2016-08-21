@@ -11,7 +11,7 @@ export function getMargins(positions, rowHeight) {
   const numTopHeadings = positions.filter(p => p == 'above').length
   const topHeadingHeight = numTopHeadings * rowHeight
   const numBottomHeadings = positions.filter(p => p == 'below').length
-  const bottomHeadingHeight = (numBottomHeadings + 1.6/2.6) * rowHeight
+  const bottomHeadingHeight = (numBottomHeadings + 1.2/2.6) * rowHeight
   return {
     top: topHeadingHeight,
     bottom: bottomHeadingHeight

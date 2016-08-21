@@ -17,7 +17,7 @@ export default class Section2 extends Component {
     const inlineImageStyles = {backgroundColor: props.colors.background}
     return <Section {...props}>
       <div>
-        And <Link text="here" href={urls.googleScholar}/> is a list of my published papers.
+        <Link text="Here" href={urls.googleScholar}/> is a list of my published papers.
       </div>
       <div>
         It was sometime during my undergraduate studies that I got the opportunity to apply my technical skills to an area that had always fascinated me: understanding the brain. My introduction to the field was working as a research assistant at the Queensland Brain Institute with <Link text="Professor Geoff Goodhill" href={urls.geoff}/>, where I worked on using image processing to extract and analyse microscope images of neurons. 

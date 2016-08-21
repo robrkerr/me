@@ -9,7 +9,7 @@ import sections from './Sections'
 import { getColors, getMargins, getSectionList, getPageScroll } from '../utils'
 
 const topPanelStyle = {
-  paddingTop: 'calc(100vh - ' + (sections.length*2 + 19) + 'rem)'
+  paddingTop: 'calc(100vh - ' + (sections.length*2 + 22) + 'rem)'
 }
 
 export default class App extends Component {

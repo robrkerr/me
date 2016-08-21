@@ -51,16 +51,6 @@ export default class Timeline extends Component {
         <div style={{height: 40}} className={styles.dividerLine}></div>
       </div>
       <div className={styles.rightColumn}>
-        <div style={{top: yearScale(2005.9), height: timeScale(0.3)}} className={styles.item}>
-          <div className={styles.itemInner}>
-            Vacation job
-          </div>
-        </div>
-        <div style={{top: yearScale(2006.9), height: timeScale(0.3)}} className={styles.item}>
-          <div className={styles.itemInner}>
-            Vacation job
-          </div>
-        </div>
         <div style={{top: yearScale(2007.3), height: timeScale(2.1)}} className={styles.item}>
           <div className={styles.itemInner}>
             <div>Part-time</div>
@@ -83,3 +73,14 @@ export default class Timeline extends Component {
     </div>
   }
 }
+
+        // <div style={{top: yearScale(2005.9), height: timeScale(0.3)}} className={styles.item}>
+        //   <div className={styles.itemInner}>
+        //     Vacation job
+        //   </div>
+        // </div>
+        // <div style={{top: yearScale(2006.9), height: timeScale(0.3)}} className={styles.item}>
+        //   <div className={styles.itemInner}>
+        //     Vacation job
+        //   </div>
+        // </div>
