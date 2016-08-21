@@ -25,10 +25,14 @@ export default class Section3 extends Component {
         I first got into web development towards the end of my PhD by teaching myself Ruby on Rails. To properly cement my understanding, I decided to build an online rhyming dictionary. After a few iterations, through which I learnt about databases, phonetics, AngularJS and CSS, I’d built something I was happy with that you can still find online at <Link text="anyrhyme.com" href={urls.anyrhyme}/>.
       </div>
       <div>
-        Since then, I joined IBM Research and started doing web development as part of my job. This work has included... 
+        Since joining IBM Research, web development has become part of my job. This has been largely focused around developing a browser and cloud-based tool for performing and visualising simulations of neurons. This tool gives researchers a rich, visual interface for them to explore their models, provides them with cloud-based resources for data storage and computation, and allows them to seamlessly share and publish their results in a way others can easily view and reproduce. 
+      </div>
+      <div className={imageStyles.scienceWrapper}>
+        <div className={imageStyles.science}></div>
+        <p>Sketch courtsey of <Link text="filtercake" href="http://webgram.co/p/8At_6ztmn6"/></p>
       </div>
       <div>
-        I've also been lucky enough to present some of my work at international JavaScript conferences: RejectJS in Berlin (2015) and JSConfBP in Budapest (2016). Here's the video of me giving the talk in Budapest:
+        I’ve been lucky enough to present some of this work at a JavaScript conference in Berlin (RejectJS 2015) and another in Budapest (JSConfBP 2016). Here's the video my talk in Budapest:
       </div>
       {
         (width >= 600) ? (
@@ -51,7 +55,9 @@ export default class Section3 extends Component {
       <div>
         I’ve also started to get involved in conference organisation, helping out with <Link text="CSSConfAU" href={urls.cssConfAU}/> and <Link text="JSConfAU" href={urls.jsConfAU}/>, and being one of the organisers of the connected event <Link text="Decompress" href={urls.decompress}/>. For the CFP this year, the team decided to do things a bit different (as <Link text="described by Glen Maddern" href={urls.cfpBlog}/>) and, as part of this, I built the talk description component of the <Link text="form" href={urls.cfpCode}/> that allowed people to anonymise their own talk submissions. We got really positive feedback on the form. Here's an animation of how it worked:
       </div>
-      <div className={imageStyles.cfp}><div></div></div>
+      <div className={imageStyles.cfpWrapper}>
+        <div className={imageStyles.cfp}></div>
+      </div>
     </Section>
   }
 }

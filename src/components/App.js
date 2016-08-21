@@ -9,7 +9,7 @@ import sections from './Sections'
 import { getColors, getMargins, getSectionList, getPageScroll } from '../utils'
 
 const topPanelStyle = {
-  paddingTop: 'calc(100vh - ' + (sections.length*2 + 20) + 'rem)'
+  paddingTop: 'calc(100vh - ' + (sections.length*2 + 19) + 'rem)'
 }
 
 export default class App extends Component {
@@ -88,7 +88,9 @@ export default class App extends Component {
       <div>
         <div className={styles.container} style={inlineStyleMain}>
           <div className={styles.topPanel} style={topPanelStyle}>
-            <div className={imageStyles.face}><div></div></div>
+            <div className={imageStyles.faceWrapper}>
+              <div className={imageStyles.face}></div>
+            </div>
           </div>
           {
             sections.map((section,i) => {

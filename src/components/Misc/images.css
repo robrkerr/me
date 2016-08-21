@@ -1,75 +1,76 @@
 
-.face {
+.image {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.faceWrapper {
   position: relative;
   max-width: 620px; 
   margin: 0 auto; 
   padding: 0 0.5rem; 
 }
 
-.face > div {
+.face {
   box-shadow: inset 0 0 0.7rem 0.7rem hsl(40,100%,98%);
   width: 14rem;
   height: 14rem;
   background-image: url("/images/my-face.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  composes: image;
   background-color: currentColor;
   background-blend-mode: multiply;
 }
 
-.neuron {
+.neuronWrapper {
   composes: behind from '../Sections/Sections.css';
-  transition: background-color 500ms ease-in, color 500ms ease-in;
-  padding: 1rem 0;
-  width: calc(100% - 4rem);
-  height: 30rem;
-  margin: 0 2rem;
+  margin: 0 auto;
+  max-width: 70vh;
 }
 
-.neuron > div {
+.neuron {
   transition: background-color 500ms ease-in, color 500ms ease-in;
+  padding: 1rem 0;
   width: 100%;
-  height: 100%;
+  padding-bottom: 85%;
+  margin: 1.2rem 0;
   background-image: url("/images/neuron.gif");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: 40%;
-  background-color: currentColor;
+  composes: image;
+  background-position-x: -6%;
   background-blend-mode: lighten;
+}
+
+.scienceWrapper {
+  margin: 1.4rem auto 0.8rem;
+  max-width: 70vh;
 }
 
 .science {
-  transition: background-color 500ms ease-in, color 500ms ease-in;
-  padding: 1rem 0;
-  width: calc(100% - 4rem);
-  height: 20rem;
-  margin: 0 2rem;
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  padding-bottom: 88%;
+  background-image: url("/images/science-in-the-browser.png");
+  composes: image;
+  background-position-x: 50%;
 }
 
-.science > div {
-  transition: background-color 500ms ease-in, color 500ms ease-in;
-  width: 100%;
-  height: 100%;
-  background-image: url("/images/science-in-the-browser.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: 50%;
-  background-color: currentColor;
-  background-blend-mode: lighten;
+.scienceWrapper > p {
+  font-size: 0.8rem;
+  margin: 0 1rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.cfpWrapper {
+  margin: 1.4rem auto 1.6rem;
+  max-width: 76vh;
 }
 
 .cfp {
-  width: calc(100% - 4rem);
-  height: 30rem;
-  margin: 2rem 2rem;
-}
-
-.cfp > div {
-  width: 100%;
-  height: calc(100% - 2rem);
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  padding-bottom: 86%;
   background-image: url("/images/cfp-form.gif");
-  background-repeat: no-repeat;
-  background-size: contain;
+  composes: image;
+  background-position-x: 50%;
   background-color: hsl(0, 0%, 94%);
   background-blend-mode: darken;
 }

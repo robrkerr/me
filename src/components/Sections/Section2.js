@@ -14,10 +14,7 @@ export default class Section2 extends Component {
   render() {
     const { id, heading } = this.props.section
     const props = {...this.props, id, heading} 
-    const inlineImageStyles = {
-      backgroundColor: props.colors.background,
-      color: props.colors.background
-    }
+    const inlineImageStyles = {backgroundColor: props.colors.background}
     return <Section {...props}>
       <div>
         And <Link text="here" href={urls.googleScholar}/> is a list of my published papers.
@@ -29,10 +26,10 @@ export default class Section2 extends Component {
         After this, I moved down to Melbourne for a PhD in computational neuroscience at the University of Melbourne. Over my PhD, I worked on developing mathematical models of how networks of neurons could learn and store information within the input activity they receive through incremental adjustments to the strength of their connections. Ultimately, I was interested in understanding how networks of neurons developed their structure, learn new patterns, and function as mediums for encoding, transmitting and manipulating information in the brain. I worked on this project in the Department of Electrical and Electronic Engineering, supervised by Professor Anthony Burkitt, Professor David Grayden, and Professor Doreen Thomas, and working alongside people trying to restore vision by electrically stimulated the retina, predict epileptic seizures from brain activity, and develop better strategies for cochlear implants.
       </div>
       <div>
-        After my PhD, I joined IBM Research Australia as a Postdoctoral Researcher, where I transitioned into doing a mix of web development and neuroscience research. At this point, my neuroscience research changed focus to more detailed, single cell modelling (as shown in the animation below). I use this type of model to understand the behaviour of neuron cells in the retina in order to develop treatments for degenerative blindness and in the cortex to better understand certain types of epilepsy. This involves correctly incorporating experimental results into mathematical models and carefully validating that model produces outputs that are in line with other experimental data. I am now a Research Staff Member directing the neural modelling work within the lab and supervising a number of researchers both at IBM and at the University of Melbourne.  
+        After my PhD, I joined IBM Research Australia as a Postdoctoral Researcher, where I transitioned into doing a mix of web development and neuroscience research. At this point, my neuroscience research changed focus to more detailed, single cell modelling (as shown in the animation below). I use this type of model to understand the behaviour of neuron cells in the retina in order to develop treatments for degenerative blindness and in the cortex to better understand certain types of epilepsy. This involves correctly incorporating experimental results into mathematical models and carefully validating that model produces outputs that are in line with other experimental data. I am now a Research Staff Member charged with directing the neural modelling work within the lab and I am supervising a number of researchers both at IBM and at the University of Melbourne.  
       </div>
-      <div className={imageStyles.neuron} style={inlineImageStyles}>
-        <div style={inlineImageStyles}></div>
+      <div className={imageStyles.neuronWrapper}>
+        <div className={imageStyles.neuron} style={inlineImageStyles}></div>
       </div>
       <div>
         I enjoy neuroscience research and research in general because of the focus on thinking carefully but creatively about interesting problems. Research involves complex ideas that need to be communicated accurately and tested precisely. Details matter but so does a high-level understanding of how they integrate together. I consider myself very good at organising complex concepts and systems in my mind, communicating them effectively, and making sure that I have all the important details correct. 
