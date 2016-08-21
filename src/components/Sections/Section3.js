@@ -53,6 +53,9 @@ export default class Section3 extends Component {
       <div className={imageStyles.cfpWrapper}>
         <div className={imageStyles.cfp}></div>
       </div>
+      <div>
+        CSSConfAU, JSConfAU, and Decompress are all happening at the end of this year (Nov-Dec 2016). If you're interested in sponsoring any of these (especially Decompress) or want to be involved, you should get in contact with me!
+      </div>
     </Section>
   }
 }

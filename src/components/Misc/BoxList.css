@@ -60,6 +60,22 @@
   white-space: nowrap;
 }
 
+.itemInnerLong {
+  composes: itemInner;
+}
+
+@media (min-width: 600px) {
+  .itemInnerLong {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 310px) {
+  .itemInnerLong {
+    font-size: 0.9rem;
+  }
+}
+
 .sectionGreen {
   composes: section;
 }

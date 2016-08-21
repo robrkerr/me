@@ -15,7 +15,7 @@ export default class SkillsList extends Component {
     }, {
       theme: styles.sectionPurple,
       heading: "I'd like to learn about or get better at",
-      list: ['Natural Language Processing','Design','Testing Code']
+      list: ['Natural Language Processing','Visual Design','UX Design',{long: true, text: 'Commerical Software Development'}]
     }]
     return <div className={styles.container}>
       { sections.map((section,i) => {
@@ -30,7 +30,7 @@ export default class SkillsList extends Component {
               {
                 section.list.map((item,j) => (
                   <div key={j} className={styles.itemWide}>
-                    <div className={styles.itemInner}>{item}</div>
+                    <div className={item.long ? styles.itemInnerLong : styles.itemInner}>{item.long ? item.text : item}</div>
                   </div>
                 ))
               }
