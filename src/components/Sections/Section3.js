@@ -46,7 +46,10 @@ export default class Section3 extends Component {
         )
       }
       <div>
-        I have a lot of experience prototyping ideas, learning different frameworks and developing mostly by myself. What I still really want is to get experience working on a project as part of a team. The project could be anything but ideally I'd like to be building something involving analytics and/or data visualisation. 
+        In building this and other related tools, I have starting thinking a lot about how best to manage simulations and analysis in the cloud which are either exposed through or support web based applications. Often these involve large amounts of data and the problem of trying to dynamically filter and summarise this data to allow a user to explore it all while constrained by limited bandwidth and memory is a really interesting one. 
+      </div>
+      <div>
+        While somewhat new to web development, I have a lot of experience prototyping ideas and building quite involved systems. However, I have worked on these projects predominately by myself and would really like to get experience working as part of a team on a larger project.  
       </div>
       <div>
         Here are some different languages, frameworks, libraries and technologies that I am familiar with or would like to try out: 
