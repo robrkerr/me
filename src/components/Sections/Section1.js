@@ -15,9 +15,6 @@ export default class Section1 extends Component {
         And this is my story.
       </div>
       <div>
-        Just want a regular, printable cv? <Link text="Here you go." href="/cv.pdf"/>
-      </div>
-      <div>
         I am a scientific researcher who lives in Melbourne (Australia) and has recently transitioned into web development. I like programming, maths, technology, and interesting problems, but I’m particularly interested in how data and ideas are visualised and presented. This website is a reflection of that and was an opportunity for me to improve and demonstrate my skills in building things for the web. 
       </div>
       <div className={styles.newSubSection}>
@@ -48,3 +45,7 @@ export default class Section1 extends Component {
     </Section>
   }
 }
+
+// <div>
+//   Just want a regular, printable cv? <Link text="Here you go." href="/cv.pdf"/>
+// </div>
