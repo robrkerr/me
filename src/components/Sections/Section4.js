@@ -46,7 +46,7 @@ export default class Section4 extends Component {
         </span>
       </div>
       <div>
-        And finally, <Link text="here's" href={urls.meRepo}/> the code behind this page is you're interested.  
+        And finally, <Link text="here's" href={urls.meRepo}/> the code behind this page if you're interested.  
       </div>
     </Section>
   }
