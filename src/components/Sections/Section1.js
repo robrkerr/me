@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Section from './Section'
 import Timeline from '../Misc/Timeline'
 import Link from '../Misc/Link'
+import { urls } from '../../utils'
 import styles from './Sections.css'
 
 export default class Section1 extends Component {
@@ -33,11 +34,11 @@ export default class Section1 extends Component {
         </span>
         <span className={styles.sectionHighlight}>
           <span className={styles.sectionFieldLabel}>Twitter: </span>
-          <span className={styles.sectionFieldValue}>@robrkerr</span>
+          <span className={styles.sectionFieldValue}><Link text="@robrkerr" href={urls.twitter}/></span>
         </span>
         <span className={styles.sectionHighlight}>
           <span className={styles.sectionFieldLabel}>GitHub: </span>
-          <span className={styles.sectionFieldValue}>@robrkerr</span>
+          <span className={styles.sectionFieldValue}><Link text="@robrkerr" href={urls.github}/></span>
         </span>
       </div>
       <div className={styles.newSubSection}>

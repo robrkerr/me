@@ -2,13 +2,8 @@ import React, {Component} from 'react'
 import Section from './Section'
 import SkillsList from '../Misc/SkillsList'
 import Link from '../Misc/Link'
+import { urls } from '../../utils'
 import styles from './Sections.css'
-
-const urls = {
-  d3course: "http://isakiko.github.io/D3-visualising-data/",
-  alphaGo: "http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html",
-  meRepo: "https://github.com/robrkerr/me"
-}
 
 export default class Section4 extends Component {
 
@@ -21,7 +16,7 @@ export default class Section4 extends Component {
       </div>
       <SkillsList></SkillsList>
       <div>
-        I love maths. Especially dealing with probabilities, differential equations and data analysis, and constructing mathematical models of real world systems. Before I got into neuroscience, I developed mathematical models of mechanical components (during my degree) and the travel patterns of people throughout an entire city (while working for Veitch Lister Consulting). I particularly enjoy thinking about how data and models are best presented or visualised. This is just as important for the person doing the analysis or modelling as it is for them to communicate what they have learnt. 
+        I love maths. Especially dealing with probabilities, differential equations and data analysis, and constructing mathematical models of real world systems. Before I got into neuroscience, I developed mathematical models of mechanical components (during my degree) and the travel patterns of people throughout an entire city (while working for Veitch Lister Consulting). I particularly enjoy thinking about how data and models are best presented and/or visualised. This is just as important for the person doing the analysis or modelling as it is for them to communicate what they have learnt. 
       </div>
       <div>
         On this point, I developed (along with my friend Isabell) a web development course for researchers to help them better present their findings (here are the <Link href={urls.d3course} text="course notes"/>). In addition to introducing HTML, CSS and Javascript, the course is focussed around the visualisation library D3.js. We’ve now taught this course numerous times. I have also always tutored or lectured university courses (and am still doing a little of this now) and teaching is generally something I find very rewarding. 

@@ -2,17 +2,9 @@ import React, {Component} from 'react'
 import Section from './Section'
 import ProgrammingList from '../Misc/ProgrammingList'
 import Link from '../Misc/Link'
+import { urls } from '../../utils'
 import styles from './Sections.css'
 import imageStyles from '../Misc/images.css'
-
-const urls = {
-  anyrhyme: "http://anyrhyme.com/",
-  cssConfAU: "http://2016.cssconf.com.au/",
-  jsConfAU: "http://2016.jsconfau.com/",
-  decompress: "http://2016.decompress.com.au/",
-  cfpBlog: "http://2016.jsconfau.com/2016/07/01/cfp.html#anonymised-description-field",
-  cfpCode: "https://github.com/robrkerr/smart-proposals"
-}
 
 export default class Section3 extends Component {
 
@@ -32,7 +24,7 @@ export default class Section3 extends Component {
         <p>Sketch courtsey of <Link text="filtercake" href="http://webgram.co/p/8At_6ztmn6"/></p>
       </div>
       <div>
-        I’ve been lucky enough to present some of this work at a JavaScript conference in Berlin (RejectJS 2015) and another in Budapest (JSConfBP 2016). Here's the video my talk in Budapest:
+        I’ve been lucky enough to present some of this work at a JavaScript conference in Berlin (RejectJS 2015) and another in Budapest (JSConfBP 2016). Here's the video of my talk in Budapest:
       </div>
       {
         (width >= 600) ? (
@@ -46,7 +38,7 @@ export default class Section3 extends Component {
         )
       }
       <div>
-        In building this and other related tools, I have starting thinking a lot about how best to manage simulations and analysis in the cloud which are either exposed through or support web based applications. Often these involve large amounts of data and the problem of trying to dynamically filter and summarise this data to allow a user to explore it all while constrained by limited bandwidth and memory is a really interesting one. 
+        In building this and other related tools, I have started thinking a lot about how best to manage simulations and analysis in the cloud which are either exposed through or support web based applications. Often these involve large amounts of data and the problem of trying to dynamically filter and summarise this data to allow a user to explore it all while constrained by limited bandwidth and memory is a really interesting one. 
       </div>
       <div>
         While somewhat new to web development, I have a lot of experience prototyping ideas and building quite involved systems. However, I have worked on these projects predominately by myself and would really like to get experience working as part of a team on a larger project.  
