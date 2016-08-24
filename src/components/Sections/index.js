@@ -17,8 +17,8 @@ export default [
   {
     id: 'neuroscience', 
     heading: 'I am a computational neuroscientist', 
-    bgColor: '#041a1a', 
-    darkBgColor: '#020f0f',
+    bgColor: '#052727',//#041a1a', 
+    darkBgColor: '#031717',//#020f0f',
     textColor: '#dfdfdf',
     // highlightColor: '#d9db7b',
     content: Section2
@@ -35,8 +35,8 @@ export default [
   {
     id: 'learning', 
     heading: 'I enjoy learning new things', 
-    bgColor: '#151019', 
-    darkBgColor: '#0c090f',
+    bgColor: '#251c2d',//#151019', 
+    darkBgColor: '#16101a',//#0c090f',
     textColor: '#dfdfdf',
     // highlightColor: '#fff0f9',
     content: Section4

@@ -1,5 +1,6 @@
 
 export const urls = {
+  email: "mailto:robrkerr@gmail.com",
   twitter: "https://twitter.com/robrkerr",
   github: "https://github.com/robrkerr",
   vlc: "http://www.veitchlister.com.au/",
@@ -14,6 +15,7 @@ export const urls = {
   cssConfAU: "http://2016.cssconf.com.au/",
   jsConfAU: "http://2016.jsconfau.com/",
   decompress: "http://2016.decompress.com.au/",
+  decompressEmail: "mailto:team@decompress.com.au",
   cfpBlog: "http://2016.jsconfau.com/2016/07/01/cfp.html#anonymised-description-field",
   cfpCode: "https://github.com/robrkerr/smart-proposals",
   d3course: "http://isakiko.github.io/D3-visualising-data/",

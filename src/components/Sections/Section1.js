@@ -11,9 +11,10 @@ export default class Section1 extends Component {
     const { id, heading } = this.props.section
     const props = {...this.props, id, heading} 
     return <Section {...props}>
-      <div>
-        And this is my story.
-      </div>
+      {
+        <div>And this is my story.</div>
+        // <div>And I'm looking for interesting work in web development and/or data visualisation.</div>
+      }
       <div>
         I am a scientific researcher who lives in Melbourne (Australia) and has recently transitioned into web development. I like programming, maths, technology, and interesting problems, but I’m particularly interested in how data and ideas are visualised and presented. This website is a reflection of that and was an opportunity for me to improve and demonstrate my skills in building things for the web. 
       </div>
@@ -23,7 +24,7 @@ export default class Section1 extends Component {
       <div>
         <span className={styles.sectionHighlight}>
           <span className={styles.sectionFieldLabel}>Email: </span>
-          <span className={styles.sectionFieldValue}>robrkerr@gmail.com</span>
+          <span className={styles.sectionFieldValue}><Link text="robrkerr@gmail.com" href={urls.email}/></span>
         </span>
         <span className={styles.sectionHighlight}>
           <span className={styles.sectionFieldLabel}>Phone: </span>
