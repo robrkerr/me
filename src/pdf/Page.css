@@ -1,0 +1,194 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  height: 12%;
+  padding: 1.5rem 0 1rem;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 2rem;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.headerTop > div {
+  display: flex;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.website {
+  padding: 0.3rem 0;
+}
+
+.headerLeft {
+  width: 60%;
+  padding-top: 0.4rem;
+}
+
+.headerRight {
+  width: 40%;
+  padding-top: 0.65rem;
+}
+
+.tldr {
+  padding: 0.5rem 2rem; 
+  font-style: italic;
+}
+
+.headerDetail {
+  text-align: right;
+  padding: 0.3rem 2rem;
+}
+
+.footer {
+  height: 6%;
+}
+
+.referenceNote {
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.column {
+  display: flex;
+}
+
+.descriptiveColumn {
+  composes: column;
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0; 
+}
+
+.descriptiveColumn > *+* {
+  margin-top: 1.5rem;
+}
+
+.timelineColumn {
+  composes: column;
+  width: 44%;
+}
+
+.section {
+  padding: 0 2rem 0 2rem; 
+}
+
+.sectionHeading {
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 2.2rem;
+}
+
+.sectionMain {
+  line-height: 1.4em;
+  font-size: 0.95rem;
+}
+
+.newSubsection {
+  margin-top: 0.7rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: row; 
+  margin: 2rem 0.5rem;
+  height: 100%;
+}
+
+.timelineStrip {
+  position: relative;
+  width: 20px;
+  height: calc(100% - 4rem);
+  margin: 0 4px;
+}
+
+.timelineItem {
+  position: absolute;
+  width: 100%;
+}
+
+.leftTimeline {
+  composes: timelineStrip;
+}
+
+.leftTimeline > .timelineItem {
+  background-color: #3f645f;
+}
+
+.rightTimeline {
+  composes: timelineStrip;
+}
+
+.rightTimeline > .timelineItem {
+  background-color: #415466;
+}
+
+.experience {
+  position: relative;
+  padding: 0.5rem 2rem 1rem 0.5rem;
+  width: 100%;
+}
+
+.experienceItemHeading {
+  font-weight: 400;
+  border-bottom: solid 1px;
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+.experienceItem {
+  position: absolute;
+  width: calc(100% - 2.5rem);
+}
+
+.itemYears {
+  float: right;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.itemPlace {
+  padding-top: 0.2rem;
+}
+
+.itemDetails {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.paper {
+  font-size: 0.73rem;
+  line-height: 1rem;
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.talk {
+  font-size: 0.85rem;
+  line-height: 1rem;
+  margin: 0.4rem 0 0.6rem 1.5rem;
+}

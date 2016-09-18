@@ -3,6 +3,7 @@
   "scripts": {
     "test": "webpack",
     "start": "NODE_ENV=development webpack-dev-server --port=7777 --content-base public/ --hot --inline",
+    "pdf": "NODE_ENV=development webpack-dev-server --config=src/pdf/webpack.config.js --port=7776 --content-base src/pdf/ --hot --inline",
     "clean": "rm -f public/bundle.js && rm -f public/styles.css",
     "build": "npm run clean && NODE_ENV=production webpack -p --progress",
     "deploy": "npm run build && surge -p public/ -d https://robkerr.surge.sh"
