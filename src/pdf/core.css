@@ -2,28 +2,25 @@
   margin: 0;
   padding: 0;
 }
-html, body { 
-  overflow-x: hidden;
-}
-html { 
+html {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-size: 14px;
+  /* A4 page size */
   width: 21cm;
   height: 29.7cm;
+  /* centre the page */
   margin: 0 auto;
+  /* outside the page */
   background-color: grey;
-}
-b, a {
-  font-weight: 400;
-  color: inherit;
+  overflow-y: auto;
 }
 body {
   width: 100%;
   height: 100%;
   overflow-y: hidden;
 }
-body > div {
-  width: 100%;
-  height: 100%;
+b, a {
+  font-weight: 400;
+  color: inherit;
 }

@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
-var fs = require('fs');
 
 var DEV_MODE = process.env.NODE_ENV === 'development';
 

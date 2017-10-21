@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Link from './Link'
 import { urls } from '../../utils'
-import * as d3 from 'd3'
+import * as d3 from 'd3-scale'
 import styles from './Timeline.css'
 
 const yearScale = d3.scaleLinear().domain([2004.75, 2016.5]).range([0, 110*11.75])

@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
-var fs = require('fs');
 
 var plugins = [
   new ExtractTextPlugin('styles.css', { allChunks: true })
